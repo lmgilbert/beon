@@ -5,27 +5,22 @@
 </template>
 
 <script>
-import axios from "axios";
-import Vue from "vue";
-window.Vue = Vue;
+import axios from 'axios'
+import Vue from 'vue'
+window.Vue = Vue
 export default {
-  
   name: 'home',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
   },
-  mounted() {
-      axios
-      .get("https://cors-anywhere.herokuapp.com/http://www.behance.net/v2/users/eldiablo?api_key=UhOrt3HySq95LUrfQWErTpR5KK12oq2Q")
+  mounted () {
+    axios.get('https://cors-anywhere.herokuapp.com/http://www.behance.net/v2/users/eldiablo?api_key=UhOrt3HySq95LUrfQWErTpR5KK12oq2Q')
       .then(response => {
-
-        console.log(response);
-      })
-      .catch(error => console.log('error'));
-  },
-
+        console.log(response)
+      }).catch(error => console.log('error'))
+  }
 }
 </script>
 

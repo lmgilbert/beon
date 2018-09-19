@@ -5,18 +5,10 @@
 </template>
 
 <script>
-import axios from "axios";
-import Vue from "vue";
-window.Vue = Vue;
+import Vue from 'vue'
+window.Vue = Vue
 export default {
-  
-  name: 'project',
-  data () {
-    
-  },
-  mounted() {
-
-  },
+  name: 'project'
 
 }
 </script>
