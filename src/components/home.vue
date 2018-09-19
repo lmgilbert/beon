@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <h2>b&emacr;on</h2>
-    <p>{{ designers.eldiablo }}</p>
+    <p>{{ designers.clairehartley }}</p>
   </div>
 </template>
 

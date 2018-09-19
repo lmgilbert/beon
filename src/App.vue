@@ -1,13 +1,20 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <navbar/>
     <router-view/>
+    <footerbar/>
   </div>
 </template>
 
 <script>
+import nav from './components/NavBar'
+import footerbar from './components/footer'
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    'navbar': nav,
+    'footerbar': footerbar
+  }
 }
 </script>
 
@@ -18,7 +25,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 h1 {
   font-size: 100px;
@@ -26,6 +32,19 @@ h1 {
 }
 h2 {
   font-size: 80px;
+}
+h3{
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+}
+p {
+  color: #707070;
+  font-size: 18px;
+}
+img {
+  width: 100%;
+  height: auto;
 }
 
 </style>
