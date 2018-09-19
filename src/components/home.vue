@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
     <h2>b&emacr;on</h2>
+    <p>{{ designers.eldiablo }}</p>
   </div>
 </template>
 
@@ -12,14 +13,30 @@ export default {
   name: 'home',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      designers: []
     }
   },
+
+  methods: {
+    getDisignerProjects: function (userID) {
+      axios.get('https://cors-anywhere.herokuapp.com/http://www.behance.net/v2/users/' + userID + '?api_key=UhOrt3HySq95LUrfQWErTpR5KK12oq2Q')
+        .then(response => {
+          this.designers[userID] = response
+          console.log(this.designers)
+        }).catch(error => console.log(error.stack))
+    }
+  },
+
   mounted () {
-    axios.get('https://cors-anywhere.herokuapp.com/http://www.behance.net/v2/users/eldiablo?api_key=UhOrt3HySq95LUrfQWErTpR5KK12oq2Q')
-      .then(response => {
-        console.log(response)
-      }).catch(error => console.log('error'))
+    this.getDisignerProjects('eldiablo')
+    this.getDisignerProjects('NodYoung')
+    this.getDisignerProjects('clairehartley')
+    this.getDisignerProjects('erikmusin')
+
+    /*  axios.get('https://cors-anywhere.herokuapp.com/http://www.behance.net/v2/users/eldiablo?api_key=UhOrt3HySq95LUrfQWErTpR5KK12oq2Q')
+    .then(response => {
+      console.log(response)
+    }).catch(error => console.log(error.stack)) */
   }
 }
 </script>
