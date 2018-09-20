@@ -1,7 +1,10 @@
 <template>
   <div class="hello">
+    <div class="hero-image">
+
     <h2>b&emacr;on</h2>
     <p>{{ designers.clairehartley.data }}</p>
+  </div>
   </div>
 </template>
 
@@ -57,5 +60,6 @@ li {
   display: inline-block;
   margin: 0 10px;
 }
+
 
 </style>
