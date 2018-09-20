@@ -1,6 +1,7 @@
 <template>
   <div class="nav">
     <div class="columns is-mobile is-centered navbar">
+      <img id="logo" src="../assets/logo.png"/>
       <p>nav</p>
     </div>
   </div>
@@ -23,4 +24,9 @@ export default {
   height: 25px;
   color: black;
 }
+#logo{
+  height: 50px;
+  width: 50px;
+}
+
 </style>
