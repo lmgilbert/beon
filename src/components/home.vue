@@ -30,10 +30,10 @@ export default {
   },
 
   mounted () {
-    this.getDisignerProjects('eldiablo')
-    this.getDisignerProjects('NodYoung')
-    this.getDisignerProjects('clairehartley')
-    this.getDisignerProjects('erikmusin')
+    this.getDisignerProjects('Lukas Furlan')
+    this.getDisignerProjects('Bao Luu')
+    this.getDisignerProjects('Emily Soto')
+    this.getDisignerProjects('Reuben Wu')
 
     /*  axios.get('https://cors-anywhere.herokuapp.com/http://www.behance.net/v2/users/eldiablo?api_key=UhOrt3HySq95LUrfQWErTpR5KK12oq2Q')
     .then(response => {
