@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <h2>b&emacr;on</h2>
-    <p>{{ designers.clairehartley.data }}</p>
+    <p>{{ designers}}</p>
   </div>
 </template>
 
@@ -19,13 +19,12 @@ export default {
 
   methods: {
     getDisignerProjects: function (userID) {
-      axios.get('https://cors-anywhere.herokuapp.com/http://www.behance.net/v2/users/' + userID + '?api_key=UhOrt3HySq95LUrfQWErTpR5KK12oq2Q')
+      axios.get('https://cors-anywhere.herokuapp.com/http://www.behance.net/v2/projects/' + userID + '?api_key=UhOrt3HySq95LUrfQWErTpR5KK12oq2Q')
         .then(response => {
-          this.designers[userID] = response
+          this.designers = response
           this.$forceUpdate()
           console.log(this.designers)
         }).catch(error => console.log(error.stack))
-        
     }
   },
 
