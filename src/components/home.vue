@@ -18,14 +18,14 @@ export default {
   },
 
   methods: {
+    //  lvKLHgLoGgeVqc8B6QOzUxRcS2NtbUYX, UhOrt3HySq95LUrfQWErTpR5KK12oq2Q
     getDisignerProjects: function (userID) {
-      axios.get('https://cors-anywhere.herokuapp.com/http://www.behance.net/v2/users/' + userID + '?api_key=UhOrt3HySq95LUrfQWErTpR5KK12oq2Q')
+      axios.get('https://cors-anywhere.herokuapp.com/http://www.behance.net/v2/users/' + userID + '?api_key=lvKLHgLoGgeVqc8B6QOzUxRcS2NtbUYX')
         .then(response => {
           this.designers[userID] = response
           this.$forceUpdate()
           console.log(this.designers)
         }).catch(error => console.log(error.stack))
-        
     }
   },
 
@@ -34,11 +34,6 @@ export default {
     this.getDisignerProjects('NodYoung')
     this.getDisignerProjects('clairehartley')
     this.getDisignerProjects('erikmusin')
-
-    /*  axios.get('https://cors-anywhere.herokuapp.com/http://www.behance.net/v2/users/eldiablo?api_key=UhOrt3HySq95LUrfQWErTpR5KK12oq2Q')
-    .then(response => {
-      console.log(response)
-    }).catch(error => console.log(error.stack)) */
   }
 }
 </script>
