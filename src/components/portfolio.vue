@@ -3,9 +3,9 @@
     <div id="title-container">
       <h2>{{ name }}</h2>
     </div>
-    <div id="portfolio-details" class="columns is-desktop">
+    <div id="portfolio-details" class="columns is-desktop is-variable is-8">
       <div class="column">
-        <div class="image-cropper is-one-quarter">
+        <div class="image-cropper is-pulled-right">
             <img :src="picture" class="rounded" />
         </div>
       </div>
