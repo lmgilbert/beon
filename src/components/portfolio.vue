@@ -5,17 +5,16 @@
     </div>
     <div id="portfolio-details" class="columns is-desktop">
       <div class="column">
-        <div class="image-cropper">
+        <div class="image-cropper is-one-quarter">
             <img :src="picture" class="rounded" />
         </div>
       </div>
       <div class="column">
         <a :href="behanceurl" id="title-name">{{ fullName }}</a>
         <p>{{ title }}</p>
-        <div style="location">
-          <font-awesome-icon icon="map-marker-alt" />
-          <p>{{ location }}</p>
-        </div>
+        <span id="location">
+          <font-awesome-icon icon="map-marker-alt" />{{ location }}
+        </span>
         <h5>About</h5>
         <p>{{ bio }}</p>
       </div>
@@ -87,9 +86,12 @@ img {
 }
 svg {
   display: inline-block;
+  margin-right: 5px;
+  color: #E15361;
 }
 #location {
   display: inline-block;
+  color: #d1d1d1;
 }
 p {
   text-align: left;
@@ -103,12 +105,20 @@ a {
   text-decoration: underline;
 }
 #title-name {
-  color: black;
-  text-decoration: underline;
+  color: #E15361;
   font-weight: bold;
 }
 h5 {
   color: black;
+  font-weight: bold;
+}
+#portfolio-details {
+  margin-top: 40px;
+}
+#title-container {
+  margin-top: 40px;
+}
+h2 {
   font-weight: bold;
 }
 </style>
