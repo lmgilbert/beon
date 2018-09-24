@@ -26,19 +26,19 @@
           <div class="column is-7" id="designerInfo">
             <h3>{{ designer }}</h3>
           <p id="description"> {{ description }}</p></div>
-        </div> 
+        </div>
       </div>
   </div>
 </template>
 
 <script>
-import Vue from "vue";
-import axios from "axios";
+import Vue from 'vue'
+import axios from 'axios'
 // import './../node_modules/bulma/css/bulma.css'
-window.Vue = Vue;
+window.Vue = Vue
 export default {
-  name: "project",
-  data() {
+  name: 'project',
+  data () {
     return {
       project: null,
       work: null,
@@ -49,15 +49,15 @@ export default {
       designerIcon: null,
       occupation: null,
       description: null
-    };
+    }
   },
   methods: {
-    getDisignerProjects: function(userID) {
+    getDisignerProjects: function (userID) {
       axios
         .get(
-          "https://cors-anywhere.herokuapp.com/http://www.behance.net/v2/projects/" +
+          'https://cors-anywhere.herokuapp.com/http://www.behance.net/v2/projects/' +
             userID +
-            "?api_key=UhOrt3HySq95LUrfQWErTpR5KK12oq2Q"
+            '?api_key=UhOrt3HySq95LUrfQWErTpR5KK12oq2Q'
         )
         .then(response => {
           this.project = response
@@ -72,13 +72,13 @@ export default {
           this.$forceUpdate()
           console.log(this.project)
         })
-        .catch(error => console.log(error.stack));
+        .catch(error => console.log(error.stack))
     }
   },
-  mounted() {
-    this.getDisignerProjects("70403283");
+  mounted () {
+    this.getDisignerProjects('70403283')
   }
-};
+}
 </script>
 <style scoped>
 h2 {
@@ -99,7 +99,6 @@ h3{
 }
 #title {
   text-align: center;
-  
 }
 .designerIcon {
   border-radius: 50%;
@@ -119,7 +118,7 @@ h3{
   padding: 0;
 }
 .titleAndArrow{
-  margin: 50px 0; 
+  margin: 50px 0;
 }
 .font-awesome-icon svg{
   margin: 2px;
