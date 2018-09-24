@@ -32,6 +32,9 @@ export default {
   },
 
   methods: {
+    // ELx4Wb6sGGwWnIwP06LglFqOqeFoFDEM
+    //
+    //
     getDisignerProjects: function(userID) {
       axios
         .get(
@@ -78,7 +81,7 @@ li {
 }
 h1 {
   position: absolute;
-  top: 40%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
@@ -86,7 +89,7 @@ h1 {
 }
 h3 {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
@@ -95,7 +98,7 @@ h3 {
 }
 h4 {
   position: absolute;
-  top: 65%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;

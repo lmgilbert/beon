@@ -1,5 +1,5 @@
 <template>
-  <div class="nav">
+  <div class="nav" v-bind:class="{transparent: isOnHomePage}" >
     <div class="columns">
         <div class="column">
     <img id="logo" src="../assets/beonLogo.png"/>
@@ -28,17 +28,26 @@ export default {
   data() {
     return {
       msg: "Welcome to Your Vue.js App",
-      pageTitle: "default"
+      pageTitle: "default",
+      isOnHomePage: false,
     };
   },
   methods: {
     onPageChange(title) {
       this.pageTitle = title
-    }
+      this.isOnHomePage = this.$router.currentRoute.name == "home"
+    },
+
   },
   mounted: function() {
+    this.isOnHomePage = this.$router.currentRoute.name == "home"
     this.$root.$on("pageChanged", this.onPageChange)
-  }
+  },
+  watch:{
+    $route (to, from){
+        this.isOnHomePage = to.name == "home"
+    }
+  } 
 };
 </script>
 
@@ -61,6 +70,16 @@ export default {
   padding: 30px 30px;
   background-color: #e15361;
 }
+
+.transparent {
+  background-color: rgba(88, 33, 38, 0.5);
+  position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
 h1 {
   font-size: 40px;
   color: white;
