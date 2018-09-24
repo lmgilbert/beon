@@ -18,7 +18,7 @@
           <font-awesome-icon icon="map-marker-alt" />{{ location }}
         </span>
         <h5>About</h5>
-        <p>{{ bio }}</p>
+        <p v-for="bios in bio" :key="bios">{{ bios }}</p>
       </div>
       <div class="column" id="contact">
         <a :href="website">{{ website }}</a>
@@ -93,7 +93,7 @@ svg {
 }
 #location {
   display: inline-block;
-  color: #d1d1d1;
+  color: #707070;
 }
 p {
   text-align: left;
@@ -105,9 +105,11 @@ a {
 #contact a{
   color: #E15361;
   text-decoration: underline;
+  font-size: 18px;
+  font-weight: bold;
 }
 #title-name {
-  color: #E15361;
+  color: black;
   font-weight: bold;
 }
 h5 {

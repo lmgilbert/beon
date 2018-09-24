@@ -23,7 +23,7 @@ export default {
   font-family: "Helvetica neue", "Helvetica", "Arial", "sans-serif";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
+  color: black;
 }
 h1 {
   font-size: 100px;
