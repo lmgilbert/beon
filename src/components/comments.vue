@@ -1,12 +1,14 @@
 <template>
-  <div id="project-comment" class="columns">
-    <h3 class="column">comments</h3>
-    <div id="comments" class="column">
-        <div v-for="contents in comment" :key="contents">
-            <img class="comment-icon" />
-            <p class="display-name">{{contents.user.display_name}}</p>
+  <div id="project-comment" class="has-text-left">
+    <h3>comments</h3>
+    <div id="comments">
+        <div v-for="contents in comment" :key="contents" class="columns" id="comment">
+            <a v-bind:href="contents.user.url" class="column is-1"><img class="comment-icon" v-bind:src="contents.user.images[50]" /></a>
+            <div class="column is-8">
+            <a class="display-name" v-bind:href="contents.user.url">{{contents.user.display_name}}</a>
             <p>{{contents.created_on | moment("dddd, MMMM Do YYYY")}}</p>
             <p>{{contents.comment}}</p>
+            </div>
         </div>
     </div>
   </div>
@@ -24,7 +26,6 @@ export default {
     return {
       comments: null,
       comment: null,
-      photo: null
     }
   },
   methods: {
