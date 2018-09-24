@@ -23,7 +23,6 @@ export default {
   font-family: "Helvetica neue", "Helvetica", "Arial", "sans-serif";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
 }
 h1 {
@@ -32,6 +31,7 @@ h1 {
 }
 h2 {
   font-size: 80px;
+  text-align: center
 }
 h3{
   font-size: 20px;

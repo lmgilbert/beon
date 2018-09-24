@@ -10,8 +10,13 @@
         </div>
       </div>
       <div class="column">
-        <a :href="behanceurl">{{ fullName }}</a>
-        <span><font-awesome-icon icon="faMapMarkerAlt" /></span>
+        <a :href="behanceurl" id="title-name">{{ fullName }}</a>
+        <p>{{ title }}</p>
+        <div style="location">
+          <font-awesome-icon icon="map-marker-alt" />
+          <p>{{ location }}</p>
+        </div>
+        <h5>About</h5>
         <p>{{ bio }}</p>
       </div>
       <div class="column" id="contact">
@@ -52,7 +57,7 @@ export default {
           this.title = this.designers[userID].data.user.company
           this.location = this.designers[userID].data.user.location
           this.website = this.designers[userID].data.user.website
-          this.picture = this.designers[userID].data.user.images[115]
+          this.picture = this.designers[userID].data.user.images[230]
           this.bio = this.designers[userID].data.user.sections
           this.behanceurl = this.designers[userID].data.user.url
           console.log(this.designers)
@@ -68,8 +73,8 @@ export default {
 
 <style scoped>
 .image-cropper {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     position: relative;
     overflow: hidden;
     border-radius: 50%;
@@ -79,5 +84,31 @@ img {
     margin: 0 auto;
     height: 100%;
     width: auto;
+}
+svg {
+  display: inline-block;
+}
+#location {
+  display: inline-block;
+}
+p {
+  text-align: left;
+  font-size: 16px;
+}
+a {
+  text-align: left;
+}
+#contact a{
+  color: #E15361;
+  text-decoration: underline;
+}
+#title-name {
+  color: black;
+  text-decoration: underline;
+  font-weight: bold;
+}
+h5 {
+  color: black;
+  font-weight: bold;
 }
 </style>
