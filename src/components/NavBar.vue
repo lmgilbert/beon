@@ -6,7 +6,7 @@
     
   </div>
       <div class="column">
-      <h1>bēon design</h1>
+      <h1></h1>
 </div>
     <div class="column">
       

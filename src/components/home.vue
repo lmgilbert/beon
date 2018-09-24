@@ -1,10 +1,18 @@
 <template>
   <div class="hello">
     <div class="hero-image">
-   
+      <div class="hero">
+        <img src="../assets/Hero.png"/>
+          <div class="text">
+            <h1>bēon</h1>
+            <h3>Design agency</h3>
+            <h4>Meet our designers</h4>
+          </div>
+
+      </div>
       <h2>b&emacr;on</h2>
-      <p>{{ designers.clairehartley.data }}</p>
-  </div>
+      <p>{{ designers.zhelieznova.data }}</p>
+   </div>
   </div>
 </template>
 
@@ -39,10 +47,10 @@ export default {
   },
 
   mounted() {
-    this.getDisignerProjects("Lukas Furlan");
-    this.getDisignerProjects("Bao Luu");
-    this.getDisignerProjects("Emily Soto");
-    this.getDisignerProjects("Reuben Wu");
+    this.getDisignerProjects("zhelieznova");
+    this.getDisignerProjects("arturdenys");
+    this.getDisignerProjects("R_G_Gomina");
+    this.getDisignerProjects("sashaillusign");
 
     /*  axios.get('https://cors-anywhere.herokuapp.com/http://www.behance.net/v2/users/eldiablo?api_key=UhOrt3HySq95LUrfQWErTpR5KK12oq2Q')
     .then(response => {
@@ -65,5 +73,32 @@ ul {
 li {
   display: inline-block;
   margin: 0 10px;
+}
+h1 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  letter-spacing: 20px;
+}
+h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  letter-spacing: 0px;
+  font-weight: 400;
+}
+h4 {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  letter-spacing: 5px;
+  font-size: 50px;
+  font-weight: 200;
 }
 </style>
