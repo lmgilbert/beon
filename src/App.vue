@@ -9,11 +9,9 @@
 <script>
 import nav from './components/NavBar'
 import footerbar from './components/footer'
-import home from './components/home'
 export default {
   name: 'App',
   components: {
-    'home' : home,
     'navbar': nav,
     'footerbar': footerbar
   }
