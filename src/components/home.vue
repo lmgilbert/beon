@@ -7,14 +7,15 @@
             <h1>bēon</h1>
             <h3>Design agency</h3>
             <h4>Meet our designers</h4>
-             <img class="email" src="../assets/white-email.png"/>
-             <img class="phone" src="../assets/white-phone.png"/>
           </div>
-         
-      </div>
+        </div>
+    <div class="Scroll-arrow">
+      
+    </div>
       <h2></h2>
       <p>{{ designers.zhelieznova.data }}</p>
    </div>
+
   </div>
 </template>
 
@@ -33,14 +34,14 @@ export default {
 
   methods: {
     // ELx4Wb6sGGwWnIwP06LglFqOqeFoFDEM
-    //
+    // v5rFuoo114eTmVB5dKjaVHsbAaMu11gY
     //
     getDisignerProjects: function(userID) {
       axios
         .get(
           "https://cors-anywhere.herokuapp.com/http://www.behance.net/v2/users/" +
             userID +
-            "?api_key=ELx4Wb6sGGwWnIwP06LglFqOqeFoFDEM"
+            "?api_key=v5rFuoo114eTmVB5dKjaVHsbAaMu11gY"
         )
         .then(response => {
           this.designers[userID] = response;
@@ -111,6 +112,13 @@ h4 {
   width: 50px;
 }
 .email {
+  height: 50px;
+  width: 50px;
+}
+.Scroll-arrow {
+  padding: 150px;
+}
+.arrow {
   height: 50px;
   width: 50px;
 }

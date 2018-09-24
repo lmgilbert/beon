@@ -5,12 +5,12 @@
       <div class="column">
       </div>
         <div class="column">
-            <p style="float: left;"><img id="email" src="../assets/email.png"/></p>
-            <p>ProDesign@bēon.co.nz</p>
+            <p style="float: left;"><img id="email" src="../assets/email.png">ProDesign@bēon.co.nz</p>
+      
         </div>
         <div class="column">
-            <p style="float: left;"><img id="phone" src="../assets/phone.png"/></p>
-            <p>03 321 12345</p>
+            <p style="float: left;"><img id="phone" src="../assets/phone.png">03 321 12345</p>
+            
         </div>
       <div class="column">
       </div>
