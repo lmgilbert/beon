@@ -12,6 +12,9 @@ export default {
   name: 'portfolio',
   mounted: function() {
     this.$root.$emit("pageChanged", this.designers.name + "zhelieznova");
+    this.$root.$emit("pageChanged", this.designers.name + "arturdenys");
+    this.$root.$emit("pageChanged", this.designers.name + "R_G_Gomina");
+    this.$root.$emit("pageChanged", this.designers.name + "sashaillusign");
   }
 }
 </script>
