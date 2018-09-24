@@ -9,7 +9,10 @@ import Vue from 'vue'
 window.Vue = Vue
 
 export default {
-  name: 'portfolio'
+  name: 'portfolio',
+  mounted: function() {
+    this.$root.$emit("pageChanged", this.designers.name + "zhelieznova");
+  }
 }
 </script>
 

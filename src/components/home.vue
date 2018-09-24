@@ -7,9 +7,12 @@
             <h1>bēon</h1>
             <h3>Design agency</h3>
             <h4>Meet our designers</h4>
+             <img class="email" src="../assets/white-email.png"/>
+             <img class="phone" src="../assets/white-phone.png"/>
           </div>
+         
       </div>
-      <h2>b&emacr;on</h2>
+      <h2></h2>
       <p>{{ designers.zhelieznova.data }}</p>
    </div>
   </div>
@@ -50,7 +53,7 @@ export default {
     this.getDisignerProjects("arturdenys");
     this.getDisignerProjects("R_G_Gomina");
     this.getDisignerProjects("sashaillusign");
-
+    this.$root.$emit("pageChanged", "");
     /*  axios.get('https://cors-anywhere.herokuapp.com/http://www.behance.net/v2/users/eldiablo?api_key=UhOrt3HySq95LUrfQWErTpR5KK12oq2Q')
     .then(response => {
       console.log(response)
@@ -99,5 +102,13 @@ h4 {
   letter-spacing: 5px;
   font-size: 50px;
   font-weight: 200;
+}
+.phone {
+  height: 50px;
+  width: 50px;
+}
+.email {
+  height: 50px;
+  width: 50px;
 }
 </style>

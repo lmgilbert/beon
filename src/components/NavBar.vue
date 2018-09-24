@@ -6,7 +6,7 @@
     
   </div>
       <div class="column">
-      <h1></h1>
+      {{ pageTitle }}
 </div>
     <div class="column">
       
@@ -27,8 +27,17 @@ export default {
   name: "HelloWorld",
   data() {
     return {
-      msg: "Welcome to Your Vue.js App"
+      msg: "Welcome to Your Vue.js App",
+      pageTitle: "default"
     };
+  },
+  methods: {
+    onPageChange(title) {
+      this.pageTitle = title
+    }
+  },
+  mounted: function() {
+    this.$root.$on("pageChanged", this.onPageChange)
   }
 };
 </script>
