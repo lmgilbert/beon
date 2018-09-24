@@ -8,7 +8,6 @@
             <h3>Design agency</h3>
             <h4>Meet our designers</h4>
           </div>
-
       </div>
       <h2>b&emacr;on</h2>
       <p>{{ designers.zhelieznova.data }}</p>
