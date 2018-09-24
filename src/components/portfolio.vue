@@ -121,7 +121,7 @@ h5 {
   margin-top: 40px;
 }
 #title-container svg{
-  font-size: 60px;
+  font-size: 65px;
 }
 h2 {
   font-weight: bold;
