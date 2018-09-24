@@ -1,11 +1,11 @@
 <template>
   <div class="hello">
-    <div id="title-container" class="columns">
+    <div id="title-container" class="columns is-mobile">
       <font-awesome-icon icon="angle-left" class="column is-pulled-right arrows" />
       <h2 class="column is-three-fifths">{{ name }}</h2>
       <font-awesome-icon icon="angle-right" class="column is-pulled-left arrows" />
     </div>
-    <div id="portfolio-details" class="columns is-desktop is-variable is-8">
+    <div id="portfolio-details" class="columns is-mobile is-variable is-8">
       <div class="column">
         <div class="image-cropper is-pulled-right">
             <img :src="picture" class="rounded" />
@@ -121,7 +121,7 @@ h5 {
   margin-top: 40px;
 }
 #title-container svg{
-  font-size: 70px;
+  font-size: 60px;
 }
 h2 {
   font-weight: bold;
