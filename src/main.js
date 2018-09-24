@@ -6,10 +6,15 @@ import router from './router'
 import './../node_modules/bulma/css/bulma.css'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
+import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
+import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 //  add font awesome icons here example:
 library.add(faMapMarkerAlt)
+library.add(faAngleRight)
+library.add(faAngleLeft)
+
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 

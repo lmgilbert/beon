@@ -1,7 +1,9 @@
 <template>
   <div class="hello">
-    <div id="title-container">
-      <h2>{{ name }}</h2>
+    <div id="title-container" class="columns">
+      <font-awesome-icon icon="angle-left" class="column is-pulled-right" />
+      <h2 class="column is-three-quarters">{{ name }}</h2>
+      <font-awesome-icon icon="angle-right" class="column is-pulled-left" />
     </div>
     <div id="portfolio-details" class="columns is-desktop is-variable is-8">
       <div class="column">
@@ -117,6 +119,9 @@ h5 {
 }
 #title-container {
   margin-top: 40px;
+}
+#title-container svg{
+  font-size: 70px;
 }
 h2 {
   font-weight: bold;
