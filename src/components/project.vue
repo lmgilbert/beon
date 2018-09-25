@@ -1,42 +1,59 @@
 <template>
   <div id="project">
     <!-- {{ project }} -->
-      <div class="columns titleAndArrow">
+
+    <!-- <div id="app">
+  <p>
+    <router-link to="/user/foo">/user/foo</router-link>
+    <router-link to="/user/bar">/user/bar</router-link>
+  </p>
+</div> -->
+
+      <div class="columns titleAndArrow" id="app">
         <div class="column is-2  arrow-left">
-          <font-awesome-icon icon="angle-left"/>
+          <router-link to="/user/foo">
+            <font-awesome-icon class="svg" icon="angle-left"/>
+          </router-link>
         </div>
-        <div class="column is-8">
+        <div class="column is-8 title">
           <h2 id="title">{{ title }}</h2>
         </div>
         <div class="column arrow-right">
-          <font-awesome-icon icon="angle-right"/>
+          <router-link to="/user/bar">
+            <font-awesome-icon class="svg" icon="angle-right"/>
+          </router-link>
         </div>
+        <router-view></router-view>
       </div>
       <div id="bottomPart">
         <img v-bind:src='work'/>
         <div id="stats">
-          <font-awesome-icon icon="heart" />{{ appreciations }}
-          <font-awesome-icon icon="eye" />{{ views }}
+          <font-awesome-icon class="svg" icon="heart" />{{ appreciations }}
+          <font-awesome-icon class="svg" icon="eye" />{{ views }}
         </div>
         <br>
         <div class="columns">
           <div class="column is-1">
             <img class="designerIcon" v-bind:src='designerIcon'/>
           </div>
-          <div class="column is-7" id="designerInfo">
+          <div class="column is-11" id="designerInfo">
             <h3>{{ designer }}</h3>
           <p id="description"> {{ description }}</p></div>
         </div>
          <comments />
       </div>
+      <hr>
+      <!-- {{ project }} -->
   </div>
 </template>
 
 <script>
 import Vue from 'vue'
 import axios from 'axios'
+
 import comments from './comments'
 // import './../node_modules/bulma/css/bulma.css'
+
 window.Vue = Vue
 export default {
   name: 'project',
@@ -81,7 +98,9 @@ export default {
     }
   },
   mounted () {
-    this.getDisignerProjects('70403283')
+    //60068713
+    //console.log()
+    this.getDisignerProjects(this.$route.params.id)
   }
 }
 </script>
@@ -104,6 +123,7 @@ h3{
 }
 #title {
   text-align: center;
+  text-transform: capitalize
 }
 .designerIcon {
   border-radius: 50%;
@@ -120,12 +140,19 @@ h3{
   text-align: center;
   display: inline;
   font-size: 40px;
-  padding: 0;
 }
 .titleAndArrow{
-  margin: 50px 0;
+  margin: 65px 0;
+  color: #df5563;
 }
-.font-awesome-icon svg{
-  margin: 2px;
+.svg{
+  margin: 0 10px;
+}
+hr{
+  width: 70%;
+  margin: 40px auto;
+}
+.arrow-left, .arrow-right .title{
+  justify-content: center;
 }
 </style>
