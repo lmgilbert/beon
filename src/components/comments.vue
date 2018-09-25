@@ -2,7 +2,7 @@
   <div id="project-comment" class="has-text-left">
     <h4>Comments</h4>
     <div id="comments">
-        <div v-for="contents in comment.slice(0,10)" :key="contents" class="columns is-mobile" id="comment">
+        <div v-for="contents in comment.slice(0,10)" :key="contents.key" class="columns is-mobile" id="comment">
           <div class="column is-1-desktop is-2-tablet is-3-mobile">
             <a v-bind:href="contents.user.url" class="image"><img class="comment-icon is-rounded" v-bind:src="contents.user.images[50]" /></a>
           </div>
@@ -19,7 +19,7 @@
 <script>
 import Vue from 'vue'
 import axios from 'axios'
-Vue.use(require('vue-moment'));
+Vue.use(require('vue-moment'))
 // import './../node_modules/bulma/css/bulma.css'
 window.Vue = Vue
 export default {
@@ -27,7 +27,7 @@ export default {
   data () {
     return {
       comments: null,
-      comment: null,
+      comment: []
     }
   },
   methods: {
