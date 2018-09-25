@@ -1,14 +1,16 @@
 <template>
   <div id="project-comment" class="has-text-left">
-    <h3>comments</h3>
+    <h4>Comments</h4>
     <div id="comments">
-        <div v-for="contents in comment.slice(0,10)" :key="contents" class="columns" id="comment">
-            <a v-bind:href="contents.user.url" class="column is-1"><img class="comment-icon" v-bind:src="contents.user.images[50]" /></a>
-            <div class="column is-8">
+        <div v-for="contents in comment.slice(0,10)" :key="contents" class="columns is-mobile" id="comment">
+          <div class="column is-1-desktop is-2-tablet is-3-mobile">
+            <a v-bind:href="contents.user.url" class="image"><img class="comment-icon is-rounded" v-bind:src="contents.user.images[50]" /></a>
+          </div>
+          <div class="column is-8-desktop is-8-tablet is-9-mobile">
             <a class="display-name" v-bind:href="contents.user.url">{{contents.user.display_name}}</a>
             <p>{{contents.created_on | moment("dddd, MMMM Do YYYY")}}</p>
             <p>{{contents.comment}}</p>
-            </div>
+          </div>
         </div>
     </div>
   </div>
@@ -98,9 +100,10 @@ h3{
 #comments p{
   font-size: 13px;
 }
-.comment-icon {
-  border-radius: 50%;
-  height: 50px;
-  width: 50px;
+
+h4{
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: black;
 }
 </style>
