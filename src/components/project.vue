@@ -1,16 +1,29 @@
 <template>
   <div id="project">
     <!-- {{ project }} -->
-      <div class="columns titleAndArrow">
+
+    <!-- <div id="app">
+  <p>
+    <router-link to="/user/foo">/user/foo</router-link>
+    <router-link to="/user/bar">/user/bar</router-link>
+  </p>
+</div> -->
+
+      <div class="columns titleAndArrow" id="app">
         <div class="column is-2  arrow-left">
-          <font-awesome-icon class="svg" icon="angle-left"/>
+          <router-link to="/user/foo">
+            <font-awesome-icon class="svg" icon="angle-left"/>
+          </router-link>
         </div>
         <div class="column is-8 title">
           <h2 id="title">{{ title }}</h2>
         </div>
         <div class="column arrow-right">
-          <font-awesome-icon class="svg" icon="angle-right"/>
+          <router-link to="/user/bar">
+            <font-awesome-icon class="svg" icon="angle-right"/>
+          </router-link>
         </div>
+        <router-view></router-view>
       </div>
       <div id="bottomPart">
         <img v-bind:src='work'/>
@@ -36,7 +49,6 @@
 <script>
 import Vue from 'vue'
 import axios from 'axios'
-// import './../node_modules/bulma/css/bulma.css'
 window.Vue = Vue
 export default {
   name: 'project',
@@ -78,7 +90,9 @@ export default {
     }
   },
   mounted () {
-    this.getDisignerProjects('60068713')
+    //60068713
+    //console.log()
+    this.getDisignerProjects(this.$route.params.id)
   }
 }
 </script>
@@ -121,6 +135,7 @@ h3{
 }
 .titleAndArrow{
   margin: 65px 0;
+  color: #df5563;
 }
 .svg{
   margin: 0 10px;
