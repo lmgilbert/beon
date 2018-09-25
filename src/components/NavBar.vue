@@ -67,7 +67,7 @@ export default {
   margin-left: 30px;
 }
 .nav {
-  padding: 30px 30px;
+  padding: 20px 20px;
   background-color: #e15361;
 }
 
