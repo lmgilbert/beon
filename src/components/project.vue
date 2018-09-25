@@ -1,6 +1,6 @@
 <template>
   <div id="project">
-    <!-- {{ project }} -->
+    {{ project }}
 
     <!-- <div id="app">
   <p>
@@ -73,6 +73,9 @@ export default {
             userID +
             '?api_key=UhOrt3HySq95LUrfQWErTpR5KK12oq2Q'
         )
+        .get(
+          'https://cors-anywhere.herokuapp.com/https://api.behance.net/v2/projects?q=') +
+
         .then(response => {
           this.project = response
           this.work = response.data.project.covers.original
@@ -90,8 +93,6 @@ export default {
     }
   },
   mounted () {
-    //60068713
-    //console.log()
     this.getDisignerProjects(this.$route.params.id)
   }
 }
