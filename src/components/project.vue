@@ -1,6 +1,6 @@
 <template>
   <div id="project">
-    {{ project }}
+    <!-- {{ project }} -->
 
     <!-- <div id="app">
   <p>
@@ -40,9 +40,10 @@
             <h3>{{ designer }}</h3>
           <p id="description"> {{ description }}</p></div>
         </div>
+        <hr>
          <comments />
       </div>
-      <hr>
+      
       <!-- {{ project }} -->
   </div>
 </template>
@@ -81,8 +82,8 @@ export default {
             userID +
             '?api_key=UhOrt3HySq95LUrfQWErTpR5KK12oq2Q'
         )
-        .get(
-          'https://cors-anywhere.herokuapp.com/https://api.behance.net/v2/projects?q=') +
+        // .get(
+        //   'https://cors-anywhere.herokuapp.com/https://api.behance.net/v2/projects?q=') +
 
         .then(response => {
           this.project = response
@@ -150,7 +151,6 @@ h3{
   margin: 0 10px;
 }
 hr{
-  width: 70%;
   margin: 40px auto;
 }
 .arrow-left, .arrow-right .title{
