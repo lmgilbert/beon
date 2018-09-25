@@ -65,9 +65,9 @@ export default {
         }).catch(error => console.log(error.stack))
     }
   },
-
+  // clairehartley
   mounted () {
-    this.getDisignerProjects('clairehartley')
+    this.getDisignerProjects(this.$route.params.id)
   }
 }
 </script>
