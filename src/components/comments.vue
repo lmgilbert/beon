@@ -2,7 +2,7 @@
   <div id="project-comment" class="has-text-left">
     <h3>comments</h3>
     <div id="comments">
-        <div v-for="contents in comment" :key="contents" class="columns" id="comment">
+        <div v-for="contents in comment.slice(0,10)" :key="contents" class="columns" id="comment">
             <a v-bind:href="contents.user.url" class="column is-1"><img class="comment-icon" v-bind:src="contents.user.images[50]" /></a>
             <div class="column is-8">
             <a class="display-name" v-bind:href="contents.user.url">{{contents.user.display_name}}</a>
