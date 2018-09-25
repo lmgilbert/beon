@@ -1,28 +1,20 @@
 <template>
-  <div class="">
-    <div class="columns is-mobile is-centered navbar">
+  <div class="contact">
     <div class="columns">
-      <div class="column">
-      </div>
-        <div class="column">
-            <p style="float: left;"><img id="email" src="../assets/email.png">ProDesign@bēon.co.nz</p>
-      
-        </div>
-        <div class="column">
-            <p style="float: left;"><img id="phone" src="../assets/phone.png">03 321 12345</p>
-            
-        </div>
-      <div class="column">
-      </div>
-    <div class="column">
-        <img id="facebook" src="../assets/facebook.png"/>
-        <img id="twitter" src="../assets/twitter.png"/>
+  <div class="column">
+  </div>
+  <div class="column">
+    <div class="icons-footer">
+    <img id="email" src="../assets/email.png"><div class="number"> bēon@design.co.nz</div>
+    <img id="phone" src="../assets/phone.png"><div class="number">03 321 12345</div>
     </div>
+  </div>
+  <div class="column"> 
+
+
+  </div>
+
 </div>
-    
-
-
-    </div>
   </div>
 </template>
 
@@ -39,10 +31,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.footer {
-  height: 25px;
-  color: black;
-}
+
 #phone {
   height: 40px;
   width: 40px;
@@ -51,7 +40,15 @@ export default {
   height: 40px;
   width: 40px;
 }
-p {
+.icons-footer {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin: 30px;
+}
+.number {
+  text-decoration: none;
   color: #e15361;
+  background-color: white;
+  display: inline-block;
 }
 </style>

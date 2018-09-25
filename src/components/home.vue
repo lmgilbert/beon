@@ -7,8 +7,9 @@
             <h1>bēon</h1>
             <h3>Design agency</h3>
             <h4>Meet our designers</h4>
-                <img class="email" src="../assets/white-email.png"/>
-          <img class="phone" src="../assets/white-phone.png"/>
+          <img class="email" src="../assets/white-email.png"/>
+          <img class="phone" src="../assets/white-phone.png"/>  
+
           </div>
 
         </div>
@@ -223,5 +224,9 @@ h4 {
 .arrow {
   height: 50px;
   width: 50px;
+}
+.container {
+  background-color: #F7F7F7;
+  padding: 30px;
 }
 </style>
