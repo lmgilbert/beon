@@ -40,6 +40,7 @@
             <h3>{{ designer }}</h3>
           <p id="description"> {{ description }}</p></div>
         </div>
+         <comments />
       </div>
       <hr>
       <!-- {{ project }} -->
@@ -49,9 +50,16 @@
 <script>
 import Vue from 'vue'
 import axios from 'axios'
+
+import comments from './comments'
+// import './../node_modules/bulma/css/bulma.css'
+
 window.Vue = Vue
 export default {
   name: 'project',
+  components: {
+    'comments': comments
+  },
   data () {
     return {
       project: null,
