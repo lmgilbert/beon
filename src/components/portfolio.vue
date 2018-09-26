@@ -9,7 +9,17 @@ import Vue from 'vue'
 window.Vue = Vue
 
 export default {
-  name: 'portfolio'
+  name: 'portfolio',
+  mounted: function() {
+    this.$root.$emit("pageChanged", "PORTFOLIO");
+  },
+  watch:{
+    $route (to, from){
+      if (to.name == "portfolio") {
+        this.$root.$emit("pageChanged", "PORTFOLIO");
+      }
+    }
+  } 
 }
 </script>
 

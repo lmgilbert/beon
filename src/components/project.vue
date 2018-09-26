@@ -8,8 +8,10 @@
 import Vue from 'vue'
 window.Vue = Vue
 export default {
-  name: 'project'
-
+  name: 'project',
+  mounted: function() {
+    this.$root.$emit("pageChanged", "it works!");
+  }
 }
 </script>
 
