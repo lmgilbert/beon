@@ -1,25 +1,24 @@
 <template>
-  <div class="nav" v-bind:class="{transparent: isOnHomePage}" >
-    <div class="columns">
-        <div class="column">
-    <img id="logo" src="../assets/beonLogo.png"/>
-    
+  <div class="nav" v-bind:class="{transparent: isOnHomePage}">
+    <div class="container">
+      <div class="columns is-desktop is-vcentered">
+          <div class="column is-1 is-three-tablet has-text-left">
+              <img id="logo" src="../assets/beonLogo.png" />
+          </div>
+          <div class="column is-8 is-text-centered">
+            <h1>
+
+              Frankie's Work (test)
+              {{ pageTitle }}
+            </h1>
+          </div>
+          <div class="column has-text-right">
+              <img id="facebook" src="../assets/facebook.png" />
+              <img id="twitter" src="../assets/twitter.png" />
+          </div>      
+      </div>
   </div>
-      <div class="column">
-      {{ pageTitle }}
 </div>
-    <div class="column">
-      
-</div>
-    <div class="column">
-      
-</div>
-    <div class="column">
-       <img id="facebook" src="../assets/facebook.png"/>
-        <img id="twitter" src="../assets/twitter.png"/>
-</div>
-</div>
-  </div>
 </template>
 
 <script>
@@ -28,7 +27,7 @@ export default {
   data() {
     return {
       msg: "Welcome to Your Vue.js App",
-      pageTitle: "default",
+      pageTitle: "",
       isOnHomePage: false,
     };
   },
@@ -53,6 +52,12 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+h1 {
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: 3px
+}
 #logo {
   height: 70px;
   width: 80px;
@@ -60,6 +65,7 @@ export default {
 #facebook {
   height: 50px;
   width: 30px;
+  margin-left: 50px;
 }
 #twitter {
   height: 50px;
