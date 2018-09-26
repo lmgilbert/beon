@@ -3,13 +3,13 @@
     <div id="title-container" class="columns is-mobile">
       <h2 class="column is-center">{{ name }}</h2>
     </div>
-    <div id="portfolio-details" class="columns is-mobile is-variable is-8">
-      <div class="column">
-        <div class="image-cropper is-pulled-right">
-            <img :src="picture" class="rounded" />
+    <div id="portfolio-details" class="columns">
+      <div class="column is-4-desktop is-6-tablet is-11-mobile">
+        <div class="image" id="round-image">
+            <img :src="picture" class="is-rounded" />
         </div>
       </div>
-      <div class="column">
+      <div class="column column is-4-desktop is-6-tablet is-11-mobile" id="about">
         <a :href="behanceurl" id="title-name">{{ fullName }}</a>
         <p>{{ title }}</p>
         <span id="location">
@@ -18,7 +18,7 @@
         <h5>About</h5>
         <p v-for="bios in bio" :key="bios">{{ bios }}</p>
       </div>
-      <div class="column" id="contact">
+      <div class="column column is-4-fullhd is-11-widescreen is-11-desktop is-12-tablet is-12-mobile" id="contact">
         <div class="contact-containers">
           <img id="email" src="../assets/email.png">
           <p class="contact-details"> {{ name }}@design.co.nz</p>
@@ -86,18 +86,10 @@ export default {
 </script>
 
 <style scoped>
-.image-cropper {
-    width: 200px;
-    height: 200px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 50%;
-}
-
 img {
-    margin: 0 auto;
     height: 100%;
     width: auto;
+    margin: auto
 }
 svg {
   display: inline-block;
@@ -159,5 +151,11 @@ h2 {
 }
 .contact-containers {
   padding-top: 10px;
+  margin-left: 20px;
+  margin-right: 5px;
 }
+#about {
+  margin: 0px 20px;
+}
+
 </style>
