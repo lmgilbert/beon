@@ -5,15 +5,15 @@ import App from './App'
 import router from './router'
 import './../node_modules/bulma/css/bulma.css'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faCoffee, faHeart, faEye, faAngleRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons'
+import { faMapMarkerAlt, faAngleRight, faAngleLeft, faHeart, faEye } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 //  add font awesome icons here example:
-library.add(faCoffee)
-library.add(faHeart)
-library.add(faEye)
+library.add(faMapMarkerAlt)
 library.add(faAngleRight)
 library.add(faAngleLeft)
+library.add(faHeart)
+library.add(faEye)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
