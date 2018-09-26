@@ -9,10 +9,10 @@
   </p>
 </div> -->
 
-      <div class="columns titleAndArrow" id="app">
-        <div class="column is-2  arrow-left">
-          <router-link to="/user/foo">
-            <font-awesome-icon class="svg" icon="angle-left"/>
+      <!-- <div class="columns titleAndArrow" id="app">
+        <div class="column is-2 arrow-left">
+          <router-link to=$route.params.id>
+            <font-awesome-icon class="svg arrow" icon="angle-left"/>
           </router-link>
         </div>
         <div class="column is-8 title">
@@ -20,11 +20,12 @@
         </div>
         <div class="column arrow-right">
           <router-link to="/user/bar">
-            <font-awesome-icon class="svg" icon="angle-right"/>
+            <font-awesome-icon class="svg arrow" icon="angle-right"/>
           </router-link>
         </div>
         <router-view></router-view>
-      </div>
+      </div> -->
+      <h2 id="title">{{ title }}</h2>
       <div id="bottomPart">
         <img v-bind:src='work'/>
         <div id="stats">
@@ -43,7 +44,6 @@
         <hr>
          <comments />
       </div>
-      
       <!-- {{ project }} -->
   </div>
 </template>
@@ -82,9 +82,6 @@ export default {
             userID +
             '?api_key=UhOrt3HySq95LUrfQWErTpR5KK12oq2Q'
         )
-        // .get(
-        //   'https://cors-anywhere.herokuapp.com/https://api.behance.net/v2/projects?q=') +
-
         .then(response => {
           this.project = response
           this.work = response.data.project.covers.original
@@ -100,6 +97,7 @@ export default {
         })
         .catch(error => console.log(error.stack))
     }
+    // .get("http://api.icndb.com/jokes/random/10")
   },
   mounted () {
     this.getDisignerProjects(this.$route.params.id)
@@ -125,7 +123,8 @@ h3{
 }
 #title {
   text-align: center;
-  text-transform: capitalize
+  text-transform: capitalize;
+  margin: 65px 0;
 }
 .designerIcon {
   border-radius: 50%;
@@ -142,18 +141,22 @@ h3{
   text-align: center;
   display: inline;
   font-size: 40px;
-}
-.titleAndArrow{
-  margin: 65px 0;
   color: #df5563;
+}
+.arrow{
+  color: #df5563;
+}
+.arrow:hover{
+  color: black;
 }
 .svg{
   margin: 0 10px;
 }
 hr{
   margin: 40px auto;
+  color: #8080801a;
 }
-.arrow-left, .arrow-right .title{
+/* .arrow-left, .arrow-right .title{
   justify-content: center;
-}
+} */
 </style>

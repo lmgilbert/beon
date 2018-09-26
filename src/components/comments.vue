@@ -48,7 +48,7 @@ export default {
     }
   },
   mounted () {
-    this.getDisignerProjects('70403283')
+    this.getDisignerProjects(this.$route.params.id)
   }
 }
 </script>
