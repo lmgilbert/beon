@@ -141,13 +141,13 @@ export default {
     // v5rFuoo114eTmVB5dKjaVHsbAaMu11gY
     //  z4OTBPKghzwVWyp60e87u5KkZsxXxhCC
     // Kfxa6RCoauPffiqhTUja6Y5QhsxOkvAE
-    // S2Gr4aDGSMEQB7dvjGItrsFOB6YmR1nP
+    // SPWgoDvDXuXxf735SKDCHf5vOU2XXQxq
     getDisignerProjects: function(userID) {
       axios
         .get(
           "https://cors-anywhere.herokuapp.com/http://www.behance.net/v2/users/" +
             userID +
-            "?api_key=S2Gr4aDGSMEQB7dvjGItrsFOB6YmR1nP"
+            "?api_key=SPWgoDvDXuXxf735SKDCHf5vOU2XXQxq"
         )
         .then(response => {
           this.designers[userID] = response;
@@ -234,6 +234,7 @@ h4 {
 .arrow {
   height: 50px;
   width: 50px;
+  
 }
 .container {
   background-color: #F7F7F7;
