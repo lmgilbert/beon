@@ -1,121 +1,124 @@
 <template>
-  <div class="hello">
+<div class="hello">
     <div class="hero-image">
-      <div class="hero">
-        <img src="../assets/Hero.png"/>
-          <div class="text">
-            <h1>bēon</h1>
-            <h3>Design agency</h3>
-            <h4>Meet our designers</h4>
-          <img class="email" src="../assets/white-email.png"/>
-          <img class="phone" src="../assets/white-phone.png"/>  
+        <div class="hero">
+            <img src="../assets/Hero.png" />
 
-          </div>
+            <div class="text">
+                <h1>bēon</h1>
+                <h3>Design agency</h3>
+                <h4>Meet our designers</h4>
+                <div class="hero-icons">
+                    <img class="email" src="../assets/white-email.png" />
+                    <img class="phone" src="../assets/white-phone.png" />
+                </div>
+
+            </div>
 
         </div>
-      <div class="Scroll-arrow">
-        <img class="arrow" src="../assets/arrow.png"/>
+        <div class="Scroll-arrow">
+            <img class="arrow" src="../assets/arrow.png" />
 
-      </div>
-      <div class="container">
-    <div class="columns">
-      <div class="column">
-        <div class="card">
-  <div class="card-image">
-    <figure class="image is-4by3">
-      <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-    </figure>
-  </div>
-  <div class="card-content">
-    <div class="media">
-      <div class="media-left">
-      </div>
-      <div class="media-content">
-        <p class="title is-4">John Smith</p>
-      </div>
+        </div>
+        <div class="container">
+            <div class="columns">
+                <div class="column">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-left">
+                                </div>
+                                <div class="media-content">
+                                    <p class="title is-4">John Smith</p>
+                                </div>
+                            </div>
+
+                            <div class="content">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-left">
+                                </div>
+
+                                <div class="media-content">
+                                    <p class="title is-4">John Smith</p>
+                                </div>
+                            </div>
+
+                            <div class="content">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-left">
+                                </div>
+                                <div class="media-content">
+                                    <p class="title is-4">John Smith</p>
+                                </div>
+                            </div>
+
+                            <div class="content">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-left"> </div>
+                                <div class="media-content">
+                                    <p class="title is-4">John Smith</p>
+                                </div>
+                            </div>
+                            <div class="content">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
     </div>
-
-    <div class="content">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    </div>
-  </div>
-
+    <h2></h2>
+    <p>{{ designers.zhelieznova.data }}</p>
 </div>
-      </div>
-      <div class="column">
-       <div class="card">
-  <div class="card-image">
-    <figure class="image is-4by3">
-      <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-    </figure>
-  </div>
-  <div class="card-content">
-    <div class="media">
-      <div class="media-left">
-      </div>
-
-      <div class="media-content">
-        <p class="title is-4">John Smith</p>
-      </div>
-    </div>
-
-    <div class="content">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    </div>
-  </div>
-
-</div>
-      </div>
-      <div class="column">
-       <div class="card">
-  <div class="card-image">
-    <figure class="image is-4by3">
-      <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-    </figure>
-  </div>
-  <div class="card-content">
-    <div class="media">
-      <div class="media-left">
-      </div>
-      <div class="media-content">
-        <p class="title is-4">John Smith</p>
-      </div>
-    </div>
-
-    <div class="content">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    </div>
-  </div>
-</div>
-      </div>
-      <div class="column">
-        <div class="card">
-  <div class="card-image">
-    <figure class="image is-4by3">
-      <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-    </figure>
-  </div>
-  <div class="card-content">
-    <div class="media">      
-      <div class="media-left"> </div>
-      <div class="media-content">
-        <p class="title is-4">John Smith</p>
-      </div>
-    </div>
-    <div class="content">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    </div>
-  </div>
-</div>
-      </div>
-    </div>
-
-    </div>
-
-    </div>
-      <h2></h2>
-      <p>{{ designers.zhelieznova.data }}</p>
-   </div>
 
    
 </template>
@@ -213,10 +216,16 @@ h4 {
 .phone {
   height: 50px;
   width: 50px;
+  margin-top: -50px;
 }
 .email {
   height: 50px;
   width: 50px;
+  margin-top: -50px;
+}
+.hero-icon {
+  margin-bottom: 50px;
+  
 }
 .Scroll-arrow {
   padding: 5px;
