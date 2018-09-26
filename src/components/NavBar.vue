@@ -16,7 +16,7 @@
             <div class="column has-text-centered">
 
                 <h1>
-              Frankie's Work (test)
+                  
               {{ pageTitle }}
             </h1>
             </div>
