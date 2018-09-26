@@ -1,25 +1,28 @@
 <template>
-  <div class="nav" v-bind:class="{transparent: isOnHomePage}" >
+<div class="nav" v-bind:class="{transparent: isOnHomePage}">
     <div class="columns">
         <div class="column">
-    <img id="logo" src="../assets/beonLogo.png"/>
-    
-  </div>
-      <div class="column">
-      {{ pageTitle }}
+            <img id="logo" src="../assets/beonLogo.png" />
+
+        </div>
+        <div class="column">
+          <h1>
+            {{ pageTitle }}
+          </h1>
+            
+        </div>
+        <div class="column">
+
+        </div>
+        <div class="column">
+
+        </div>
+        <div class="column">
+            <img id="facebook" src="../assets/facebook.png" />
+            <img id="twitter" src="../assets/twitter.png" />
+        </div>
+    </div>
 </div>
-    <div class="column">
-      
-</div>
-    <div class="column">
-      
-</div>
-    <div class="column">
-       <img id="facebook" src="../assets/facebook.png"/>
-        <img id="twitter" src="../assets/twitter.png"/>
-</div>
-</div>
-  </div>
 </template>
 
 <script>
@@ -28,7 +31,7 @@ export default {
   data() {
     return {
       msg: "Welcome to Your Vue.js App",
-      pageTitle: "default",
+      pageTitle: "",
       isOnHomePage: false,
     };
   },
@@ -53,6 +56,12 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+h1 {
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: 3px
+}
 #logo {
   height: 70px;
   width: 80px;
@@ -67,7 +76,7 @@ export default {
   margin-left: 30px;
 }
 .nav {
-  padding: 20px 20px;
+  padding: 30px 20px 20px;
   background-color: #e15361;
 }
 

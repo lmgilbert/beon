@@ -1,21 +1,23 @@
 <template>
-  <div class="contact">
+<div class="contact">
     <div class="columns">
-  <div class="column">
-  </div>
-  <div class="column">
-    <div class="icons-footer">
-    <img id="email" src="../assets/email.png"><div class="number"> bēon@design.co.nz</div>
-    <img id="phone" src="../assets/phone.png"><div class="number">03 321 12345</div>
+        <div class="column">
+        </div>
+        <div class="column">
+            <div class="icons-footer">
+                <img id="email" src="../assets/email.png">
+                <div class="number"> bēon@design.co.nz</div>
+                <img id="phone" src="../assets/phone.png">
+                <div class="number">03 321 12345</div>
+            </div>
+        </div>
+        <div class="column">
+
+
+        </div>
+
     </div>
-  </div>
-  <div class="column"> 
-
-
-  </div>
-
-</div>
-  </div>
+    </div>
 </template>
 
 <script>
