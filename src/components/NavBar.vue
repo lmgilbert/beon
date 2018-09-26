@@ -1,23 +1,31 @@
 <template>
-  <div class="nav" v-bind:class="{transparent: isOnHomePage}">
+<div class="nav" v-bind:class="{transparent: isOnHomePage}">
     <div class="container">
-      <div class="columns is-desktop is-vcentered">
-          <div class="column is-1 is-three-tablet has-text-left">
-              <img id="logo" src="../assets/beonLogo.png" />
-          </div>
-          <div class="column is-8 is-text-centered">
-            <h1>
+        <div class="columns is-vcentered">
+            <div class="column is-12-mobile is-3-tablet is-2-desktop is-1">
+                <div class="columns is-mobile">
+                    <div class="column is-7">
+                        <img class="image" id="logo" src="../assets/beonLogo.png" />
+                    </div>
+                    <div class="column is-5 has-text-right is-hidden-tablet is-hidden-tablet-only is-hidden-desktop-only is-hidden-widescreen-only">
+                        <img id="facebook" src="../assets/facebook.png" />
+                        <img id="twitter" src="../assets/twitter.png" />
+                    </div>
+                </div>
+            </div>
+            <div class="column has-text-centered">
 
+                <h1>
               Frankie's Work (test)
               {{ pageTitle }}
             </h1>
-          </div>
-          <div class="column has-text-right">
-              <img id="facebook" src="../assets/facebook.png" />
-              <img id="twitter" src="../assets/twitter.png" />
-          </div>      
-      </div>
-  </div>
+            </div>
+            <div class="column is-hidden-mobile is-12-mobile is-2-tablet is-2-desktop is-1 has-text-centered">
+                <img id="facebook" src="../assets/facebook.png" />
+                <img id="twitter" src="../assets/twitter.png" />
+            </div>
+        </div>
+    </div>
 </div>
 </template>
 
@@ -59,18 +67,17 @@ h1 {
   letter-spacing: 3px
 }
 #logo {
-  height: 70px;
-  width: 80px;
+max-width: 90px;
 }
 #facebook {
   height: 50px;
   width: 30px;
-  margin-left: 50px;
+  margin-right: 10px;
 }
 #twitter {
   height: 50px;
   width: 50px;
-  margin-left: 30px;
+
 }
 .nav {
   padding: 20px 20px;
