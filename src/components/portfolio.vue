@@ -21,7 +21,7 @@
         <p v-for="bios in bio" :key="bios">{{ bios }}</p>
       </div>
       <div class="column" id="contact">
-        <a :href="website">{{ website }}</a>
+        <img source="assets/email.png" />
       </div>
     </div>
   </div>
