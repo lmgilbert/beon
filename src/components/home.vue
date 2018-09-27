@@ -15,24 +15,12 @@
           <p>03 321 12345</p>
           </div>
             </div>  
-
-
-            <div class="text">
-                <h1>bēon</h1>
-                <h3>Design agency</h3>
-                <h4>Meet our designers</h4>
-                <div class="hero-icons">
-                    <img class="email" src="../assets/white-email.png" />
-                    <img class="phone" src="../assets/white-phone.png" />
-                </div>
-
-            </div>
-
-        </div>
+       </div>
         <div class="Scroll-arrow">
             <img class="arrow" src="../assets/arrow.png" />
 
         </div>
+
         <div class="container">
             <div class="columns">
                 <div class="column">
@@ -128,7 +116,10 @@
 
         </div>
 
+     </div>
+
     </div>
+
     <h2></h2>
     <p>{{ designers.zhelieznova.data }}</p>
 </div>
@@ -246,7 +237,7 @@ h4 {
 p {
   color: white;
   margin: 12px;
-=======
+}
 .phone {
   height: 50px;
   width: 50px;
