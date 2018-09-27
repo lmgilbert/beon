@@ -1,55 +1,39 @@
 <template>
-  <div id="project">
-    <h1>test</h1>
+  <div id="projectCard">
+    
+        <div class="column is-3"  v-for="project in projects.data.projects" :key="project.key">
+            <img v-bind:src='project.covers.original'/>
+        </div>
+    {{ project }}
   </div>
 </template>
 
 <script>
 import Vue from 'vue'
 import axios from 'axios'
-
 import comments from './comments'
 // import './../node_modules/bulma/css/bulma.css'
 
 window.Vue = Vue
 export default {
   name: 'projectCard',
-  components: {
-    'comments': comments
-  },
   data () {
     return {
-      project: null,
-      work: null,
-      title: null,
-      appreciations: null,
-      views: null,
-      designer: null,
-      designerIcon: null,
-      occupation: null,
-      description: null
+      projects: null,
+      work: null
     }
   },
   methods: {
     getDisignerProjects: function (userID) {
       axios
         .get(
-          'https://cors-anywhere.herokuapp.com/http://www.behance.net/v2/projects/' +
-            userID +
-            '?api_key=UhOrt3HySq95LUrfQWErTpR5KK12oq2Q'
+          'https://cors-anywhere.herokuapp.com/http://www.behance.net/v2/users/' + userID +
+            '/projects?api_key=PhrFshKN6P31JPijhKsra2Q63cyOqaBZ'
         )
         .then(response => {
-          this.project = response
-          this.work = response.data.project.covers.original
-          this.title = response.data.project.name
-          this.appreciations = response.data.project.stats.appreciations
-          this.views = response.data.project.stats.views
-          this.designer = response.data.project.owners[0].display_name
-          this.designerIcon = response.data.project.owners[0].images[276]
-          this.occupation = response.data.project.owners[0].occupation
-          this.description = response.data.project.description
+          this.projects = response
           this.$forceUpdate()
-          console.log(this.project)
+          console.log(this.projects)
         })
         .catch(error => console.log(error.stack))
     }
@@ -62,5 +46,8 @@ export default {
 </script>
 
 <style scoped>
-
+#projectCard{
+    display: inline !important;
+    margin: 0
+}
 </style>

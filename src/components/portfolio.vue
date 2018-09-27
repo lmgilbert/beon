@@ -36,9 +36,13 @@
 <script>
 import axios from 'axios'
 import Vue from 'vue'
+import projectCard from './projectCard'
 window.Vue = Vue
 export default {
   name: 'home',
+  components: {
+    'projectCard': projectCard
+  },
   data () {
     return {
       designers: [],
@@ -67,7 +71,7 @@ export default {
           this.picture = this.designers[userID].data.user.images[230]
           this.bio = this.designers[userID].data.user.sections
           this.behanceurl = this.designers[userID].data.user.url
-          console.log(this.designers)
+          // console.log(this.designers)
         }).catch(error => console.log(error.stack))
     }
   },
