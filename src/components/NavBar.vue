@@ -16,7 +16,7 @@
             <div class="column has-text-centered">
 
                 <h1>
-              Frankie's Work (test)
+                  
               {{ pageTitle }}
             </h1>
             </div>
@@ -70,13 +70,13 @@ h1 {
 max-width: 90px;
 }
 #facebook {
-  height: 50px;
-  width: 30px;
-  margin-right: 10px;
+  height: 38px;
+  width: 18px;
+  margin-right: 15px;
 }
 #twitter {
-  height: 50px;
-  width: 50px;
+  height: 42px;
+  width: 42px;
 
 }
 .nav {
