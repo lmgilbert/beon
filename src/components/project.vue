@@ -1,60 +1,32 @@
 <template>
   <div id="project">
-    <!-- {{ project }} -->
-
-    <!-- <div id="app">
-  <p>
-    <router-link to="/user/foo">/user/foo</router-link>
-    <router-link to="/user/bar">/user/bar</router-link>
-  </p>
-</div> -->
-
-      <!-- <div class="columns titleAndArrow" id="app">
-        <div class="column is-2 arrow-left">
-          <router-link to=$route.params.id>
-            <font-awesome-icon class="svg arrow" icon="angle-left"/>
-          </router-link>
-        </div>
-        <div class="column is-8 title">
-          <h2 id="title">{{ title }}</h2>
-        </div>
-        <div class="column arrow-right">
-          <router-link to="/user/bar">
-            <font-awesome-icon class="svg arrow" icon="angle-right"/>
-          </router-link>
-        </div>
-        <router-view></router-view>
-      </div> -->
-      <h2 id="title">{{ title }}</h2>
-      <div id="bottomPart">
-        <img v-bind:src='work'/>
-        <div id="stats">
-          <font-awesome-icon class="svg" icon="heart" />{{ appreciations }}
-          <font-awesome-icon class="svg" icon="eye" />{{ views }}
-        </div>
-        <br>
-        <div class="columns">
-          <div class="column is-1">
-            <img class="designerIcon" v-bind:src='designerIcon'/>
-          </div>
-          <div class="column is-11" id="designerInfo">
-            <h3>{{ designer }}</h3>
-          <p id="description"> {{ description }}</p></div>
-        </div>
-        <hr>
-         <comments />
+    <h2 id="title">{{ title }}</h2>
+    <div id="bottomPart">
+      <img v-bind:src='work'/>
+      <div id="stats">
+        <font-awesome-icon class="svg" icon="heart" />{{ appreciations }}
+        <font-awesome-icon class="svg" icon="eye" />{{ views }}
       </div>
-      <!-- {{ project }} -->
+      <br>
+      <div class="columns">
+        <div class="column is-1">
+          <img class="designerIcon" v-bind:src='designerIcon' />
+        </div>
+        <div class="column is-11" id="designerInfo">
+          <h3>{{ designer }}</h3>
+          <p id="description"> {{ description }}</p>
+        </div>
+      </div>
+      <hr>
+      <comments />
+    </div>
   </div>
 </template>
 
 <script>
 import Vue from 'vue'
 import axios from 'axios'
-
 import comments from './comments'
-// import './../node_modules/bulma/css/bulma.css'
-
 window.Vue = Vue
 export default {
   name: 'project',
@@ -108,12 +80,10 @@ export default {
 h2 {
   font-size: 50px;
 }
-h3{
+h3 {
   font-size: 30px;
 }
 #bottomPart {
-  /* margin-top: 20px;
-  margin-bottom: 20px; */
   width: 70%;
   margin-right: auto;
   margin-left: auto;
@@ -131,32 +101,29 @@ h3{
   height: 60px;
   width: 60px;
 }
-.column{
+.column {
   text-align: left;
 }
-#description{
+#description {
   font-size: 13px;
 }
-.arrow-left, .arrow-right{
+.arrow-left, .arrow-right {
   text-align: center;
   display: inline;
   font-size: 40px;
   color: #df5563;
 }
-.arrow{
+.arrow {
   color: #df5563;
 }
-.arrow:hover{
+.arrow:hover {
   color: black;
 }
-.svg{
+.svg {
   margin: 0 10px;
 }
-hr{
+hr {
   margin: 40px auto;
   color: #8080801a;
 }
-/* .arrow-left, .arrow-right .title{
-  justify-content: center;
-} */
 </style>
