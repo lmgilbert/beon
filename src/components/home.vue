@@ -5,10 +5,16 @@
         <img src="../assets/Hero.png"/>
           <div class="text">
             <h1>bēon</h1>
-            <h3>Design agency</h3>
-            <h4>Meet our designers</h4>
-          <img class="email" src="../assets/white-email.png"/>
-          <img class="phone" src="../assets/white-phone.png"/>  
+            <h3>Dēsign Agēncy</h3>
+            <h4>Profssional Portfolios</h4>
+            <div class="whiteIcons">
+          <div class="number"><img id="email" src="../assets/white-email.png"/>
+           <p>bēon@design.co.nz</p>
+           </div>
+          <div class="number"><img id="phone" src="../assets/white-phone.png"/>
+          <p>03 321 12345</p>
+          </div>
+            </div>  
 
           </div>
 
@@ -186,23 +192,24 @@ li {
 h1 {
   position: absolute;
   top: 30%;
-  left: 50%;
+  left: 51%;
   transform: translate(-50%, -50%);
   color: white;
   letter-spacing: 20px;
 }
 h3 {
   position: absolute;
-  top: 40%;
+  top: 38%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
   letter-spacing: 0px;
   font-weight: 400;
+  font-size: 18px;
 }
 h4 {
   position: absolute;
-  top: 50%;
+  top: 46%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
@@ -210,17 +217,31 @@ h4 {
   font-size: 50px;
   font-weight: 200;
 }
-.phone {
-  height: 50px;
-  width: 50px;
+
+.number {
+  background-color: transparent;
+  color: white;
 }
-.email {
-  height: 50px;
-  width: 50px;
+#phone {
+  height: 40px;
+  width: 40px;
+}
+#email {
+  height: 40px;
+  width: 40px;
+}
+.whiteIcons {
+  text-align: center;
+  margin: -100px;
+}
+p {
+  color: white;
+  margin: 12px;
 }
 .Scroll-arrow {
-  padding: 5px;
   padding-bottom: 50px;
+  padding: 50px 20px 50px;
+  text-align: center;
 }
 .arrow {
   height: 50px;
@@ -231,4 +252,5 @@ h4 {
   background-color: #F7F7F7;
   padding: 30px;
 }
+
 </style>

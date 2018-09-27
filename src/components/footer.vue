@@ -6,7 +6,7 @@
   <div class="column">
     <div class="icons-footer">
     <img id="email" src="../assets/email.png"><div class="number"> bēon@design.co.nz</div>
-    <img id="phone" src="../assets/phone.png"><div class="number">03 321 12345</div>
+    <img id="phone" src="../assets/phone.png"><div class="number" >03 321 12345</div>
     </div>
   </div>
   <div class="column"> 
@@ -44,6 +44,7 @@ export default {
   padding-top: 50px;
   padding-bottom: 50px;
   margin: 30px;
+  position: absolute;
 }
 .number {
   text-decoration: none;
