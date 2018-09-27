@@ -1,5 +1,5 @@
 <template>
-  <div class="contact">
+<div class="contact">
     <div class="columns">
   <div class="column">
   </div>
@@ -10,12 +10,10 @@
     </div>
   </div>
   <div class="column"> 
+        </div>
 
-
-  </div>
-
-</div>
-  </div>
+    </div>
+    </div>
 </template>
 
 <script>
