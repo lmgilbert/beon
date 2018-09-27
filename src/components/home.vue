@@ -1,33 +1,38 @@
 <template>
-    <div class="hello">
-        <div class="hero-image">
-            <div class="hero">
-                <img src="../assets/Hero.png" />
-                <div class="text">
-                    <h1>bēon</h1>
-                    <h3>Dēsign Agēncy</h3>
-                    <h4>Profssional Portfolios</h4>
-                    <div class="whiteIcons">
-                        <div class="number"><img id="email" src="../assets/white-email.png" />
-                            <p>bēon@design.co.nz</p>
-                        </div>
-                        <div class="number"><img id="phone" src="../assets/white-phone.png" />
-                            <p>03 321 12345</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="Scroll-arrow">
-                    <img class="arrow" src="../assets/arrow.png" />
-                </div>
+<div class="hello">
+    <div class="hero-image">
+      <div class="hero">
+        <img src="../assets/Hero.png"/>
+          <div class="text">
+            <h1>bēon</h1>
+            <h3>Dēsign Agēncy</h3>
+            <h4>Profssional Portfolios</h4>
+            <div class="whiteIcons">
+          <div class="number"><img id="email" src="../assets/white-email.png"/>
+           <p>bēon@design.co.nz</p>
+           </div>
+          <div class="number"><img id="phone" src="../assets/white-phone.png"/>
+          <p>03 321 12345</p>
+          </div>
+            </div>  
+       </div>
+        <div class="Scroll-arrow">
+            <img class="arrow" src="../assets/arrow.png" />
 
-                <div class="container">
-                    <div class="columns">
-                        <div class="column">
-                            <div class="card">
-                                <div class="card-image">
-                                    <figure class="image is-4by3">
-                                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-                                    </figure>
+        </div>
+
+        <div class="container">
+            <div class="columns">
+                <div class="column">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-left">
                                 </div>
                                 <div class="card-content">
                                     <div class="media">
@@ -119,9 +124,13 @@
 
         </div>
 
-        <h2></h2>
-        <p>{{ designers.zhelieznova.data }}</p>
+     </div>
+
     </div>
+
+    <h2></h2>
+    <p>{{ designers.zhelieznova.data }}</p>
+</div>
 
 </template>
 
@@ -235,6 +244,34 @@ h4 {
 p {
   color: white;
   margin: 12px;
+}
+.phone {
+  height: 50px;
+  width: 50px;
+  margin-top: -50px;
+}
+.email {
+  height: 50px;
+  width: 50px;
+  margin-top: -50px;
+}
+.hero-icon {
+  margin-bottom: 50px;
+
+}
+.Scroll-arrow {
+  padding-bottom: 50px;
+  padding: 50px 20px 50px;
+  text-align: center;
+}
+.arrow {
+  height: 50px;
+  width: 50px;
+  
+}
+.container {
+  background-color: #F7F7F7;
+  padding: 30px;
 }
 
 </style>
