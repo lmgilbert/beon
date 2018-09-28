@@ -1,27 +1,29 @@
 <template>
   <div class="nav" v-bind:class="{transparent: isOnHomePage}">
-      <div class="container">
-          <div class="columns is-vcentered">
-              <div class="column is-12-mobile is-3-tablet is-2-desktop is-1">
-                  <div class="columns is-mobile">
-                      <div class="column is-7">
-                          <img class="image" id="logo" src="../assets/beonLogo.png" />
-                      </div>
-                      <div class="column is-5 has-text-right is-hidden-tablet is-hidden-tablet-only is-hidden-desktop-only is-hidden-widescreen-only">
-                          <img id="facebook" src="../assets/facebook.png" />
-                          <img id="twitter" src="../assets/twitter.png" />
-                      </div>
-                  </div>
-              </div>
-              <div class="column has-text-centered">
-                  <h1>{{ pageTitle }}</h1>
-              </div>
-              <div class="column is-hidden-mobile is-12-mobile is-2-tablet is-2-desktop is-1 has-text-centered">
-                  <img id="facebook" src="../assets/facebook.png" />
-                  <img id="twitter" src="../assets/twitter.png" />
-              </div>
+    <div class="container">
+      <div class="columns is-vcentered">
+        <div class="column is-12-mobile is-3-tablet is-2-desktop is-1">
+          <div class="columns is-mobile">
+            <div class="column is-7">
+              <img class="image" id="logo" src="../assets/beonLogo.png" />
+            </div>
+            <div class="column is-5 has-text-right is-hidden-tablet is-hidden-tablet-only is-hidden-desktop-only is-hidden-widescreen-only">
+              <img id="facebook" src="../assets/facebook.png" />
+              <img id="twitter" src="../assets/twitter.png" />
+            </div>
           </div>
+        </div>
+        <div class="column has-text-centered">
+          <h1>
+            {{ pageTitle }}
+          </h1>
+        </div>
+        <div class="column is-hidden-mobile is-12-mobile is-2-tablet is-2-desktop is-1 has-text-centered">
+          <img id="facebook" src="../assets/facebook.png" />
+          <img id="twitter" src="../assets/twitter.png" />
+        </div>
       </div>
+    </div>
   </div>
 </template>
 
@@ -58,21 +60,24 @@ h1 {
   color: white;
   font-size: 40px;
   font-weight: bold;
-  letter-spacing: 3px
+  letter-spacing: 3px;
 }
+
 #logo {
   max-width: 90px;
 }
+
 #facebook {
   height: 38px;
   width: 18px;
   margin-right: 15px;
 }
+
 #twitter {
   height: 42px;
   width: 42px;
-
 }
+
 .nav {
   padding: 30px 20px 20px;
   background-color: #e15361;
@@ -89,4 +94,5 @@ h1 {
   font-size: 40px;
   color: white;
 }
+
 </style>
