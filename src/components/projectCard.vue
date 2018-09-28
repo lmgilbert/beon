@@ -1,9 +1,10 @@
 <template>
-  <div id="projectCard">
-    
-        <div class="column is-3"  v-for="project in projects.data.projects" :key="project.key">
+  <div id="projectCard" v-if='project !== null'>
+      <div class="container-fullhd columns" v-for='row in projects' :key='row.key'>
+        <div class="column" v-for="project in row" :key="project.key">
             <img v-bind:src='project.covers.original'/>
         </div>
+      </div>
     {{ project }}
   </div>
 </template>
@@ -12,6 +13,7 @@
 import Vue from 'vue'
 import axios from 'axios'
 import comments from './comments'
+import _ from 'lodash'; 
 // import './../node_modules/bulma/css/bulma.css'
 
 window.Vue = Vue
@@ -31,9 +33,9 @@ export default {
             '/projects?api_key=PhrFshKN6P31JPijhKsra2Q63cyOqaBZ'
         )
         .then(response => {
-          this.projects = response
+          this.projects = _.chunk(response.data.projects, 3)
           this.$forceUpdate()
-          console.log(this.projects)
+          console.log(_.chunk(response.data.projects, 3))
         })
         .catch(error => console.log(error.stack))
     }
@@ -47,7 +49,15 @@ export default {
 
 <style scoped>
 #projectCard{
-    display: inline !important;
-    margin: 0
+    margin: auto;
+    width: 80%;
 }
+img{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 150px;
+}
+
 </style>
