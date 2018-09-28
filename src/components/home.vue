@@ -1,27 +1,29 @@
 <template>
-<div class="hello">
-    <div class="hero-image">
-      <div class="hero">
-        <img src="../assets/Hero.png"/>
-          <div class="text">
-            <h1>bēon</h1>
-            <h3>Dēsign Agēncy</h3>
-            <h4>Profssional Portfolios</h4>
-            <div class="whiteIcons">
-          <div class="number"><img id="email" src="../assets/white-email.png"/>
-           <p>bēon@design.co.nz</p>
-           </div>
-          <div class="number"><img id="phone" src="../assets/white-phone.png"/>
-          <p>03 321 12345</p>
-          </div>
-            </div>  
-       </div>
-        <div class="Scroll-arrow">
-            <img class="arrow" src="../assets/arrow.png" />
+    <div class="hello">
+        <div class="hero-image">
+            <div class="hero">
+                <img src="../assets/Hero.png" />
+                <div class="text">
+                    <h1>bēon</h1>
+                    <h3>Dēsign Agēncy</h3>
+                    <h4>Profssional Portfolios</h4>
+                    <div class="whiteIcons">
+                        <div class="number"><img id="email" src="../assets/white-email.png" />
+                            <p>bēon@design.co.nz</p>
+                        </div>
+                        <div class="number"><img id="phone" src="../assets/white-phone.png" />
+                            <p>03 321 12345</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="Scroll-arrow">
+                    <img class="arrow" src="../assets/arrow.png" />
 
-        </div>
+                </div>
 
-        <div class="container">
+                <project-card-container />
+
+                <!-- <div class="container">
             <div class="columns">
                 <div class="column">
                     <div class="card">
@@ -122,15 +124,13 @@
 
             </div>
 
+        </div> -->
+            </div>
         </div>
-
-     </div>
 
     </div>
 
-    <h2></h2>
-    <p>{{ designers.zhelieznova.data }}</p>
-</div>
+    <!-- <p>{{ designers.zhelieznova.data }}</p> -->
 
 </template>
 
@@ -138,9 +138,13 @@
 <script>
 import axios from "axios";
 import Vue from "vue";
+import projectCardContainer from "./projectCardContainer";
 window.Vue = Vue;
 export default {
   name: "home",
+  components: {
+    'project-card-container': projectCardContainer
+  },
   data() {
     return {
       designers: []
@@ -170,10 +174,11 @@ export default {
   },
 
   mounted() {
+      /*
     this.getDisignerProjects("zhelieznova");
     this.getDisignerProjects("arturdenys");
     this.getDisignerProjects("R_G_Gomina");
-    this.getDisignerProjects("sashaillusign");
+    this.getDisignerProjects("sashaillusign");*/
     this.$root.$emit("pageChanged", "");
     /*  axios.get('https://cors-anywhere.herokuapp.com/http://www.behance.net/v2/users/eldiablo?api_key=UhOrt3HySq95LUrfQWErTpR5KK12oq2Q')
     .then(response => {
@@ -257,7 +262,6 @@ p {
 }
 .hero-icon {
   margin-bottom: 50px;
-
 }
 .Scroll-arrow {
   padding-bottom: 50px;
@@ -267,11 +271,9 @@ p {
 .arrow {
   height: 50px;
   width: 50px;
-  
 }
 .container {
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
   padding: 30px;
 }
-
 </style>

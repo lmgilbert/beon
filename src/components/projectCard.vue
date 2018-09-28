@@ -1,12 +1,15 @@
 <template>
-  <div id="projectCard" v-if='project !== null'>
+<div>
+{{ projects }}
+</div>
+  <!-- <div id="projectCard">
       <div class="container-fullhd columns" v-for='row in projects' :key='row.key'>
         <div class="column" v-for="project in row" :key="project.key">
             <img v-bind:src='project.covers.original'/>
         </div>
       </div>
-    {{ project }}
-  </div>
+    {{ projects }}
+  </div> -->
 </template>
 
 <script>
