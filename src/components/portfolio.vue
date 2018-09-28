@@ -51,7 +51,6 @@ export default {
       behanceurl: null
     }
   },
-
   methods: {
     getDisignerProjects: function (userID) {
       axios.get('https://cors-anywhere.herokuapp.com/http://www.behance.net/v2/users/' + userID + '?api_key=lvKLHgLoGgeVqc8B6QOzUxRcS2NtbUYX')
@@ -70,18 +69,17 @@ export default {
         }).catch(error => console.log(error.stack))
     }
   },
-  // clairehartley
   mounted () {
     this.getDisignerProjects(this.$route.params.id)
-    this.$root.$emit("pageChanged", "PORTFOLIO")
+    this.$root.$emit('pageChanged', 'PORTFOLIO')
   },
-  watch:{
-    $route (to, from){
-      if (to.name == "portfolio") {
-        this.$root.$emit("pageChanged", "PORTFOLIO")
+  watch: {
+    $route (to, from) {
+      if (to.name === 'portfolio') {
+        this.$root.$emit('pageChanged', 'PORTFOLIO')
       }
     }
-  } 
+  }
 }
 </script>
 
@@ -124,7 +122,7 @@ h5 {
 #title-container {
   margin-top: 40px;
 }
-#title-container svg{
+#title-container svg {
   font-size: 65px;
 }
 h2 {
@@ -142,7 +140,7 @@ h2 {
   top: 10px;
   position: relative;
 }
-.contact-details{
+.contact-details {
   display: inline;
   font-size: 20px;
   color: #E15361;
@@ -157,5 +155,4 @@ h2 {
 #about {
   margin: 0px 20px;
 }
-
 </style>

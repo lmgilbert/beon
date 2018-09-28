@@ -55,7 +55,6 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h1 {
   color: white;
@@ -83,18 +82,14 @@ h1 {
   padding: 30px 20px 20px;
   background-color: #e15361;
 }
-
 .transparent {
   background-color: rgba(88, 33, 38, 0.5);
   position: fixed;
-  /* Stay in place */
   z-index: 1;
-  /* Sit on top */
   left: 0;
   top: 0;
   width: 100%;
 }
-
 h1 {
   font-size: 40px;
   color: white;
