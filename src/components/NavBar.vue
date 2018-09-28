@@ -14,9 +14,7 @@
           </div>
         </div>
         <div class="column has-text-centered">
-  
           <h1>
-  
             {{ pageTitle }}
           </h1>
         </div>
@@ -30,75 +28,76 @@
 </template>
 
 <script>
-  export default {
-    name: "HelloWorld",
-    data() {
-      return {
-        msg: "Welcome to Your Vue.js App",
-        pageTitle: "",
-        isOnHomePage: false
-      };
-    },
-    methods: {
-      onPageChange(title) {
-        this.pageTitle = title;
-        this.isOnHomePage = this.$router.currentRoute.name == "home";
-      }
-    },
-    mounted: function() {
-      this.isOnHomePage = this.$router.currentRoute.name == "home";
-      this.$root.$on("pageChanged", this.onPageChange);
-    },
-    watch: {
-      $route(to, from) {
-        this.isOnHomePage = to.name == "home";
-      }
+export default {
+  name: 'HelloWorld',
+  data () {
+    return {
+      msg: 'Welcome to Your Vue.js App',
+      pageTitle: '',
+      isOnHomePage: false
     }
-  };
+  },
+  methods: {
+    onPageChange (title) {
+      this.pageTitle = title
+      this.isOnHomePage = this.$router.currentRoute.name === 'home'
+    }
+  },
+  mounted: function () {
+    this.isOnHomePage = this.$router.currentRoute.name === 'home'
+    this.$root.$on('pageChanged', this.onPageChange)
+  },
+  watch: {
+    $route (to, from) {
+      this.isOnHomePage = to.name === 'home'
+    }
+  }
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  h1 {
-    color: white;
-    font-size: 40px;
-    font-weight: bold;
-    letter-spacing: 3px;
-  }
-  
-  #logo {
-    max-width: 90px;
-  }
-  
-  #facebook {
-    height: 38px;
-    width: 18px;
-    margin-right: 15px;
-  }
-  
-  #twitter {
-    height: 42px;
-    width: 42px;
-  }
-  
-  .nav {
-    padding: 30px 20px 20px;
-    background-color: #e15361;
-  }
-  
-  .transparent {
-    background-color: rgba(88, 33, 38, 0.5);
-    position: fixed;
-    /* Stay in place */
-    z-index: 1;
-    /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%;
-  }
-  
-  h1 {
-    font-size: 40px;
-    color: white;
-  }
+h1 {
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+#logo {
+  max-width: 90px;
+}
+
+#facebook {
+  height: 38px;
+  width: 18px;
+  margin-right: 15px;
+}
+
+#twitter {
+  height: 42px;
+  width: 42px;
+}
+
+.nav {
+  padding: 30px 20px 20px;
+  background-color: #e15361;
+}
+
+.transparent {
+  background-color: rgba(88, 33, 38, 0.5);
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+h1 {
+  font-size: 40px;
+  color: white;
+}
+
 </style>
