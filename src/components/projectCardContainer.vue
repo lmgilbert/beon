@@ -14,7 +14,7 @@
               
               <img v-bind:src='project.covers[202]'/>
               <p>{{ project.name }}</p>
-              <a href="#"> View More </a>
+              <a href="#"> View More </a> 
             </div>
         </div>
       </div>
