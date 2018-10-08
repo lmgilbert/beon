@@ -28,7 +28,7 @@ Vue.use(require('vue-moment'))
 // import './../node_modules/bulma/css/bulma.css'
 window.Vue = Vue
 export default {
-  name: 'project',
+  name: 'project-comment',
   data () {
     return {
       comments: null,
