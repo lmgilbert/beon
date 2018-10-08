@@ -4,7 +4,9 @@
     <div id="comments">
         <div v-for="contents in comment.slice(0,10)" :key="contents.key" class="columns is-mobile" id="comment">
           <div class="column is-1-desktop is-2-tablet is-3-mobile">
-            <a v-bind:href="contents.user.url" class="image"><img class="comment-icon is-rounded" v-bind:src="contents.user.images[50]" /></a>
+            <a v-bind:href="contents.user.url" class="image">
+              <img class="comment-icon is-rounded" v-bind:src="contents.user.images[50]" />
+            </a>
           </div>
           <div class="column is-8-desktop is-8-tablet is-9-mobile">
             <a class="display-name" v-bind:href="contents.user.url">{{contents.user.display_name}}</a>
