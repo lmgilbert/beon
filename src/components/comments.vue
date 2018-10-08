@@ -1,10 +1,15 @@
 <template>
   <div id="project-comment" class="has-text-left">
     <h4>Comments</h4>
-    <div id="comments">
+    <div v-if="isLoading" class="image">
+      <img src="../assets/lg.dual-ring-loader.gif" id="load" />
+    </div>
+    <div v-if="!isLoading" id="comments">
         <div v-for="contents in comment.slice(0,10)" :key="contents.key" class="columns is-mobile" id="comment">
           <div class="column is-1-desktop is-2-tablet is-3-mobile">
-            <a v-bind:href="contents.user.url" class="image"><img class="comment-icon is-rounded" v-bind:src="contents.user.images[50]" /></a>
+            <a v-bind:href="contents.user.url" class="image">
+              <img class="comment-icon is-rounded" v-bind:src="contents.user.images[50]" />
+            </a>
           </div>
           <div class="column is-8-desktop is-8-tablet is-9-mobile">
             <a class="display-name" v-bind:href="contents.user.url">{{contents.user.display_name}}</a>
@@ -23,11 +28,12 @@ Vue.use(require('vue-moment'))
 // import './../node_modules/bulma/css/bulma.css'
 window.Vue = Vue
 export default {
-  name: 'project',
+  name: 'project-comment',
   data () {
     return {
       comments: null,
-      comment: []
+      comment: [],
+      isLoading: true
     }
   },
   methods: {
@@ -39,6 +45,7 @@ export default {
             '/comments?api_key=UhOrt3HySq95LUrfQWErTpR5KK12oq2Q'
         )
         .then(response => {
+          this.isLoading = false
           this.comments = response
           this.comment = response.data.comments
           this.$forceUpdate()
@@ -58,13 +65,6 @@ h2 {
 }
 h3{
   font-size: 30px;
-}
-#bottomPart {
-  /* margin-top: 20px;
-  margin-bottom: 20px; */
-  width: 70%;
-  margin-right: auto;
-  margin-left: auto;
 }
 #stats {
   text-align: right;
@@ -105,5 +105,11 @@ h4{
   font-weight: bold;
   margin-bottom: 10px;
   color: black;
+}
+#load {
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
 }
 </style>

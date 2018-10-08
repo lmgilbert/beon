@@ -1,24 +1,30 @@
 <template>
   <div id="project">
-    <h2 id="title">{{ title }}</h2>
-    <div id="bottomPart">
-      <img v-bind:src='work'/>
-      <div id="stats">
-        <font-awesome-icon class="svg" icon="heart" />{{ appreciations }}
-        <font-awesome-icon class="svg" icon="eye" />{{ views }}
-      </div>
-      <br>
-      <div class="columns">
-        <div class="column is-1">
-          <img class="designerIcon" v-bind:src='designerIcon' />
+    <div v-if="isLoading" class="image">
+      <img src="../assets/lg.dual-ring-loader.gif" id="load" />
+    </div>
+    <div v-if="!isLoading">
+      <h2 id="title">{{ title }}</h2>
+      <div id="bottomPart">
+        <img v-bind:src='work'/>
+        <div id="stats">
+          <font-awesome-icon class="svg" icon="heart" />{{ appreciations }}
+          <font-awesome-icon class="svg" icon="eye" />{{ views }}
         </div>
-        <div class="column is-11" id="designerInfo">
-          <h3>{{ designer }}</h3>
-          <p id="description"> {{ description }}</p>
+        <br>
+        <div class="columns is-mobile">
+          <div class="column is-1-desktop is-2-tablet is-3-mobile image">
+            <img class="is-rounded" v-bind:src='designerIcon' />
+          </div>
+          <div class="column is-8-desktop is-7-tablet is-8-mobile" id="designerInfo">
+            <h3>{{ designer }}</h3>
+            <p id="created">{{ created | moment("dddd, MMMM Do YYYY")}}</p>
+            <p id="description"> {{ description }}</p>
+          </div>
         </div>
+        <hr>
+        <comments />
       </div>
-      <hr>
-      <comments />
     </div>
   </div>
 </template>
@@ -27,6 +33,7 @@
 import Vue from 'vue'
 import axios from 'axios'
 import comments from './comments'
+Vue.use(require('vue-moment'))
 window.Vue = Vue
 export default {
   name: 'project',
@@ -43,7 +50,9 @@ export default {
       designer: null,
       designerIcon: null,
       occupation: null,
-      description: null
+      description: null,
+      created: null,
+      isLoading: true
     }
   },
   methods: {
@@ -55,6 +64,7 @@ export default {
             '?api_key=UhOrt3HySq95LUrfQWErTpR5KK12oq2Q'
         )
         .then(response => {
+          this.isLoading = false
           this.project = response
           this.work = response.data.project.covers.original
           this.title = response.data.project.name
@@ -64,6 +74,7 @@ export default {
           this.designerIcon = response.data.project.owners[0].images[276]
           this.occupation = response.data.project.owners[0].occupation
           this.description = response.data.project.description
+          this.created = response.data.project.published_on
           this.$forceUpdate()
           console.log(this.project)
         })
@@ -104,6 +115,9 @@ h3 {
 .column {
   text-align: left;
 }
+#created {
+  font-size: 13px;
+}
 #description {
   font-size: 13px;
 }
@@ -125,5 +139,11 @@ h3 {
 hr {
   margin: 40px auto;
   color: #8080801a;
+}
+#load {
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
 }
 </style>
