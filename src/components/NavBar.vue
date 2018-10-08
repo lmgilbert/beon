@@ -1,15 +1,11 @@
 <template>
-  <div class="nav" v-bind:class="{transparent: isOnHomePage}">
+  <div class="nav is-hidden-mobile" v-bind:class="{transparent: isOnHomePage}">
     <div class="container">
       <div class="columns is-vcentered">
         <div class="column is-12-mobile is-3-tablet is-2-desktop is-1">
           <div class="columns is-mobile">
             <div class="column is-7">
               <img class="image" id="logo" src="../assets/beonLogo.png" />
-            </div>
-            <div class="column is-5 has-text-right is-hidden-tablet is-hidden-tablet-only is-hidden-desktop-only is-hidden-widescreen-only">
-              <img id="facebook" src="../assets/facebook.png" />
-              <img id="twitter" src="../assets/twitter.png" />
             </div>
           </div>
         </div>
