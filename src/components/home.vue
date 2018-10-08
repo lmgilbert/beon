@@ -1,29 +1,32 @@
 <template>
-  <div class="hello">
-    <div class="hero-image">
-      <div class="hero">
-        <img id="hero-image" src="../assets/Hero.png" />
-        <div class="text">
-          <h1 class="is-hidden-mobile is-block">bēon</h1>
-          <h3 class="is-hidden-mobile">Dēsign Agēncy</h3>
-          <h4 class="is-hidden-mobile">Profssional Portfolios</h4>
-          <div class="whiteIcons">
-            <div class="number is-hidden-mobile"><img id="email" src="../assets/white-email.png" />
-              <p>bēon@design.co.nz</p>
+    <div class="hello">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <p class="title">
+                    bēon
+                </p>
+                <p class="subtitle">
+                    Dēsign Agēncy
+                </p>
+                <p class="subtitle2">
+                    Profssional Portfolios
+                </p>
+                <p class="subtitle3">
+                    <div class="number is-hidden-mobile"><img id="email" src="../assets/white-email.png" />
+                        <p>bēon@design.co.nz</p>
+                    </div>
+                    <div class="number is-hidden-mobile"><img id="phone" src="../assets/white-phone.png" />
+                        <p>03 321 12345</p>
+                    </div>
             </div>
-            <div class="number is-hidden-mobile"><img id="phone" src="../assets/white-phone.png" />
-              <p>03 321 12345</p>
-            </div>
-          </div>
         </div>
         <div class="Scroll-arrow">
-          <img class="arrow" src="../assets/arrow.png" />
+            <img class="arrow" src="../assets/arrow.png">
         </div>
-      </div>
+
+        <h2></h2>
+        <p v-if='numberOfCompletedAPIRequests == 4'>{{ designers.zhelieznova.data }}</p>
     </div>
-    <h2></h2>
-    <p>{{ designers.zhelieznova.data }}</p>
-  </div>
 </template>
 
 <script>
@@ -34,7 +37,8 @@ export default {
   name: 'home',
   data () {
     return {
-      designers: []
+      designers: [],
+      numberOfCompletedAPIRequests: 0
     }
   },
 
@@ -54,6 +58,7 @@ export default {
         .then(response => {
           this.designers[userID] = response
           this.$forceUpdate()
+          this.numberOfCompletedAPIRequests++
           console.log(this.designers)
         })
         .catch(error => console.log(error.stack))
@@ -76,58 +81,28 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-#hero-image {
-  width: 100%;
-  height: auto;
+.hero-body {
+    background-image: url(../assets/Hero.png);
+    background-size: cover;
+    height: 700px;
 }
-h1,
-h2 {
-  font-weight: normal;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
+.title {
+  font-size: 90px;
+  font-weight: 350;
+  letter-spacing: 15px;
+  margin-top: 150px;
 }
 
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-h1 {
-  position: absolute;
-  top: 30%;
-  left: 51%;
-  transform: translate(-50%, -50%);
-  color: white;
-  letter-spacing: 20px;
-}
-
-h3 {
-  position: absolute;
-  top: 38%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  letter-spacing: 0px;
-  font-weight: 400;
+.subtitle {
   font-size: 18px;
+  letter-spacing: 2px;
 }
 
-h4 {
-  position: absolute;
-  top: 46%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  letter-spacing: 5px;
-  font-size: 50px;
+.subtitle2 {
+  font-size: 60px;
   font-weight: 200;
-}
-
-.text {
-  text-align: center;
+  letter-spacing: 5px;
+  margin-bottom: 100px;
 }
 
 .number {
@@ -136,16 +111,13 @@ h4 {
 }
 
 #phone {
-  height: 40px;
-  width: 40px;
-}
-img {
-  width: ;
+  height: 30px;
+  width: 30px;
 }
 
 #email {
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
 }
 
 .whiteIcons {
@@ -156,18 +128,6 @@ img {
 p {
   color: white;
   margin: 12px;
-}
-
-.phone {
-  height: 50px;
-  width: 50px;
-  margin-top: -50px;
-}
-
-.email {
-  height: 50px;
-  width: 50px;
-  margin-top: -50px;
 }
 
 .hero-icon {
@@ -184,4 +144,10 @@ p {
   height: 50px;
   width: 50px;
 }
+
+#app {
+  width: 100%;
+  height: auto;
+}
+
 </style>
