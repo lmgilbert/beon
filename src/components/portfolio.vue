@@ -1,31 +1,36 @@
 <template>
-  <div class="hello">
-    <div id="title-container" class="columns is-mobile">
-      <h2 class="column is-center">{{ name }}</h2>
+  <div class="portfolio">
+    <div v-if="isLoading" class="image">
+      <img src="../assets/lg.dual-ring-loader.gif" id="load" />
     </div>
-    <div id="portfolio-details" class="columns">
-      <div class="column is-4-desktop is-6-tablet is-11-mobile">
-        <div class="image" id="round-image">
-            <img :src="picture" class="is-rounded" />
-        </div>
+    <div v-if="!isLoading">
+      <div id="title-container" class="columns is-mobile">
+        <h2 class="column is-center">{{ name }}</h2>
       </div>
-      <div class="column column is-4-desktop is-6-tablet is-11-mobile" id="about">
-        <a :href="behanceurl" id="title-name">{{ fullName }}</a>
-        <p>{{ title }}</p>
-        <span id="location">
-          <font-awesome-icon icon="map-marker-alt" />{{ location }}
-        </span>
-        <h5>About</h5>
-        <p v-for="bios in bio" :key="bios">{{ bios }}</p>
-      </div>
-      <div class="column column is-4-fullhd is-11-widescreen is-11-desktop is-12-tablet is-12-mobile" id="contact">
-        <div class="contact-containers">
-          <img id="email" src="../assets/email.png">
-          <p class="contact-details"> {{ name }}@design.co.nz</p>
+      <div id="portfolio-details" class="columns">
+        <div class="column is-4-desktop is-6-tablet is-11-mobile">
+          <div class="image" id="round-image">
+              <img :src="picture" class="is-rounded" />
+          </div>
         </div>
-        <div class="contact-containers">
-          <img id="phone" src="../assets/phone.png">
-          <p class="contact-details">03 321 12345</p>
+        <div class="column column is-4-desktop is-6-tablet is-11-mobile" id="about">
+          <a :href="behanceurl" id="title-name">{{ fullName }}</a>
+          <p>{{ title }}</p>
+          <span id="location">
+            <font-awesome-icon icon="map-marker-alt" />{{ location }}
+          </span>
+          <h5>About</h5>
+          <p v-for="bios in bio" :key="bios">{{ bios }}</p>
+        </div>
+        <div class="column column is-4-fullhd is-11-widescreen is-11-desktop is-12-tablet is-12-mobile" id="contact">
+          <div class="contact-containers">
+            <img id="email" src="../assets/email.png">
+            <p class="contact-details"> {{ name }}@design.co.nz</p>
+          </div>
+          <div class="contact-containers">
+            <img id="phone" src="../assets/phone.png">
+            <p class="contact-details">03 321 12345</p>
+          </div>
         </div>
       </div>
     </div>
@@ -37,7 +42,7 @@ import axios from 'axios'
 import Vue from 'vue'
 window.Vue = Vue
 export default {
-  name: 'home',
+  name: 'portfolio',
   data () {
     return {
       designers: [],
@@ -48,13 +53,15 @@ export default {
       website: null,
       picture: null,
       bio: null,
-      behanceurl: null
+      behanceurl: null,
+      isLoading: true
     }
   },
   methods: {
     getDisignerProjects: function (userID) {
       axios.get('https://cors-anywhere.herokuapp.com/http://www.behance.net/v2/users/' + userID + '?api_key=lvKLHgLoGgeVqc8B6QOzUxRcS2NtbUYX')
         .then(response => {
+          this.isLoading = false
           this.designers[userID] = response
           this.$forceUpdate()
           this.name = this.designers[userID].data.user.first_name
@@ -154,5 +161,11 @@ h2 {
 }
 #about {
   margin: 0px 20px;
+}
+#load {
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
 }
 </style>
