@@ -18,6 +18,10 @@
                     <div class="number is-hidden-mobile"><img id="phone" src="../assets/white-phone.png" />
                         <p>03 321 12345</p>
                     </div>
+                    <p class="subtitle4">
+                        <img id="facebook" class="facebook is-hidden-desktop is-hidden-tablet" src="../assets/facebook.png" />
+                        <img id="twitter" class="twitter is-hidden-desktop is-hidden-tablet" src="../assets/twitter.png" />
+                    </p>
             </div>
         </div>
         <div class="Scroll-arrow">
@@ -148,6 +152,16 @@ p {
 #app {
   width: 100%;
   height: auto;
+}
+#facebook {
+  height: 38px;
+  width: 18px;
+  margin-right: 15px;
+}
+
+#twitter {
+  height: 42px;
+  width: 42px;
 }
 
 </style>
