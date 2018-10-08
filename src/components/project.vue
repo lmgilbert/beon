@@ -18,6 +18,7 @@
           </div>
           <div class="column is-8-desktop is-7-tablet is-8-mobile" id="designerInfo">
             <h3>{{ designer }}</h3>
+            <p id="created">{{ created | moment("dddd, MMMM Do YYYY")}}</p>
             <p id="description"> {{ description }}</p>
           </div>
         </div>
@@ -32,6 +33,7 @@
 import Vue from 'vue'
 import axios from 'axios'
 import comments from './comments'
+Vue.use(require('vue-moment'))
 window.Vue = Vue
 export default {
   name: 'project',
@@ -49,6 +51,7 @@ export default {
       designerIcon: null,
       occupation: null,
       description: null,
+      created: null,
       isLoading: true
     }
   },
@@ -71,6 +74,7 @@ export default {
           this.designerIcon = response.data.project.owners[0].images[276]
           this.occupation = response.data.project.owners[0].occupation
           this.description = response.data.project.description
+          this.created = response.data.project.published_on
           this.$forceUpdate()
           console.log(this.project)
         })
@@ -111,6 +115,9 @@ h3 {
 .column {
   text-align: left;
 }
+#created {
+  font-size: 13px;
+}
 #description {
   font-size: 13px;
 }
@@ -137,6 +144,6 @@ hr {
   width: 150px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 50px; 
+  margin-top: 50px;
 }
 </style>
