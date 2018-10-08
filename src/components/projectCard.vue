@@ -5,7 +5,7 @@
             <img v-bind:src='project.covers.original'/>
         </div>
       </div>
-    {{ project }}
+    {{ projects }}
   </div>
 </template>
 

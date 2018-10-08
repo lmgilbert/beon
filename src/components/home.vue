@@ -21,7 +21,7 @@
 
                 </div>
 
-                <project-card-container />
+                <project-card-container v-if="apiRequestComplete" v-bind:designerInfo="designers" />
 
                 <!-- <div class="container">
             <div class="columns">
@@ -143,11 +143,12 @@ window.Vue = Vue;
 export default {
   name: "home",
   components: {
-    'project-card-container': projectCardContainer
+    "project-card-container": projectCardContainer
   },
   data() {
     return {
-      designers: []
+      designers: [],
+      apiRequestComplete: false
     };
   },
 
@@ -157,24 +158,18 @@ export default {
     //  z4OTBPKghzwVWyp60e87u5KkZsxXxhCC
     // Kfxa6RCoauPffiqhTUja6Y5QhsxOkvAE
     // SPWgoDvDXuXxf735SKDCHf5vOU2XXQxq
-    getDisignerProjects: function(userID) {
-      axios
-        .get(
-          "https://cors-anywhere.herokuapp.com/http://www.behance.net/v2/users/" +
-            userID +
-            "?api_key=SPWgoDvDXuXxf735SKDCHf5vOU2XXQxq"
-        )
-        .then(response => {
-          this.designers[userID] = response;
-          this.$forceUpdate();
-          console.log(this.designers);
-        })
-        .catch(error => console.log(error.stack));
-    }
   },
 
   mounted() {
-      /*
+   
+
+    /*
+    this.getDisignerProjects("zhelieznova");
+    this.getDisignerProjects("stoempstudio");
+    this.getDisignerProjects("orange_zutto");
+    this.getDisignerProjects("sashaillusign");
+    */
+    /*
     this.getDisignerProjects("zhelieznova");
     this.getDisignerProjects("arturdenys");
     this.getDisignerProjects("R_G_Gomina");
