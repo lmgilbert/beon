@@ -2,10 +2,13 @@
     <div class="hello">
         <div class="hero-body">
             <div class="container has-text-centered">
-                <p class="title">
+               <p class="title2">
+                    <img id="hidden-logo" class="hidden-logo is-hidden-desktop is-hidden-tablet" src="../assets/beonLogo.png" />
+                </p>
+                <p class="title is-hidden-mobile">
                     bēon
                 </p>
-                <p class="subtitle">
+                <p class="subtitle is-hidden-mobile">
                     Dēsign Agēncy
                 </p>
                 <p class="subtitle2">
@@ -162,6 +165,10 @@ p {
 #twitter {
   height: 42px;
   width: 42px;
+}
+#hidden-logo {
+    height: 150px;
+  width: 165px;
 }
 
 </style>
