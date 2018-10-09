@@ -8,7 +8,7 @@
                 <p class="title is-hidden-mobile">
                     bēon
                 </p>
-                <p class="subtitle is-hidden-mobile">
+                <p class="subtitle">
                     Dēsign Agēncy
                 </p>
                 <p class="subtitle2">
@@ -135,6 +135,7 @@ export default {
 p {
   color: white;
   margin: 12px;
+  font-weight: 400;
 }
 
 .hero-icon {
