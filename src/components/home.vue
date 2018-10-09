@@ -21,7 +21,7 @@
 
                 </div>
 
-                <project-card-container v-if="apiRequestComplete" v-bind:designerInfo="designers" />
+                <project-card-container />
 
                 <!-- <div class="container">
             <div class="columns">
