@@ -1,136 +1,67 @@
 <template>
-<div class="hello">
+  <div class="hello">
     <div class="hero-image">
       <div class="hero">
-        <img src="../assets/Hero.png"/>
-          <div class="text">
-            <h1>bēon</h1>
-            <h3>Dēsign Agēncy</h3>
-            <h4>Profssional Portfolios</h4>
-            <div class="whiteIcons">
-          <div class="number"><img id="email" src="../assets/white-email.png"/>
-           <p>bēon@design.co.nz</p>
-           </div>
-          <div class="number"><img id="phone" src="../assets/white-phone.png"/>
-          <p>03 321 12345</p>
-          </div>
-            </div>  
-       </div>
-        <div class="Scroll-arrow">
-            <img class="arrow" src="../assets/arrow.png" />
-
-        </div>
-
-        <div class="container">
-            <div class="columns">
-                <div class="column">
-                    <div class="card">
-                        <div class="card-image">
-                            <figure class="image is-4by3">
-                                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-                            </figure>
-                        </div>
-                        <div class="card-content">
-                            <div class="media">
-                                <div class="media-left">
-                                </div>
-                                <div class="card-content">
-                                    <div class="media">
-                                        <div class="media-left">
-                                        </div>
-                                        <div class="media-content">
-                                            <p class="title is-4">John Smith</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="content">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="card">
-                                <div class="card-image">
-                                    <figure class="image is-4by3">
-                                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-                                    </figure>
-                                </div>
-                                <div class="card-content">
-                                    <div class="media">
-                                        <div class="media-left">
-                                        </div>
-
-                                        <div class="media-content">
-                                            <p class="title is-4">John Smith</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="content">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="card">
-                                <div class="card-image">
-                                    <figure class="image is-4by3">
-                                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-                                    </figure>
-                                </div>
-                                <div class="card-content">
-                                    <div class="media">
-                                        <div class="media-left">
-                                        </div>
-                                        <div class="media-content">
-                                            <p class="title is-4">John Smith</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="content">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="card">
-                                <div class="card-image">
-                                    <figure class="image is-4by3">
-                                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-                                    </figure>
-                                </div>
-                                <div class="card-content">
-                                    <div class="media">
-                                        <div class="media-left"> </div>
-                                        <div class="media-content">
-                                            <p class="title is-4">John Smith</p>
-                                        </div>
-                                    </div>
-                                    <div class="content">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
+        <img src="../assets/Hero.png" />
+        <div class="text">
+          <h1>bēon</h1>
+          <h3>Dēsign Agēncy</h3>
+          <h4>Meet Our Designers</h4>
+          <div class="whiteIcons">
+            <div class="number"><img id="email" src="../assets/white-email.png" />
+              <p>bēon@design.nz</p>
             </div>
+            <div class="number"><img id="phone" src="../assets/white-phone.png" />
+              <p>03 321 12345</p>
+            </div>
+          </div>
+        </div>
+        <div class="Scroll-arrow">
+          <img class="arrow" src="../assets/arrow.png" />
+        </div>
+        <h2></h2>
+      </div>
+    </div>
+    <!-- card containers -->
+    <div class="container">
 
+      <div class="columns">
+
+        <div class="column">
+          <div id="card">
+            <div class="card-content">
+              <figure class="image is-50x50">
+                <img class="is-rounded" :src="user.profilePicture">
+              </figure>
+            </div>
+            <footer class="">
+              <div class="card-footer-item">{{ user.username }}</div>
+            </footer>
+          </div>
         </div>
 
-     </div>
+        <div class="column" v-for="project in projects" :key="project.id">
+          <div class="card has-text-centered">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img :src="project.covers.original">
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="content">
+                {{ project.name }}
+                <br>
+                <a>View More</a>
+                <br>
+              </div>
+            </div>
+          </div>
+        </div>
 
+      </div>
     </div>
 
-    <h2></h2>
-    <p>{{ designers.zhelieznova.data }}</p>
-</div>
+  </div>
 
 </template>
 
@@ -139,52 +70,82 @@
 import axios from "axios";
 import Vue from "vue";
 window.Vue = Vue;
+import ProjectCardContainer from "@/components/projectCardContainer";
+
 export default {
   name: "home",
+  components: { "project-card-container": ProjectCardContainer },
   data() {
     return {
-      designers: []
+      user: {
+        username: "",
+        profilePicture: ""
+      },
+      projects: [],
+      apiKey: "z4OTBPKghzwVWyp60e87u5KkZsxXxhCC", //This should be moved to an environment variable in the future //  z4OTBPKghzwVWyp60e87u5KkZsxXxhCC
+      numberOfCompletedAPIRequests: 0
     };
   },
 
   methods: {
-    // ELx4Wb6sGGwWnIwP06LglFqOqeFoFDEM
-    // v5rFuoo114eTmVB5dKjaVHsbAaMu11gY
-    //  z4OTBPKghzwVWyp60e87u5KkZsxXxhCC
-    // Kfxa6RCoauPffiqhTUja6Y5QhsxOkvAE
-    // SPWgoDvDXuXxf735SKDCHf5vOU2XXQxq
-    getDisignerProjects: function(userID) {
+    getProjectInfo: function(userID) {
       axios
         .get(
           "https://cors-anywhere.herokuapp.com/http://www.behance.net/v2/users/" +
             userID +
-            "?api_key=SPWgoDvDXuXxf735SKDCHf5vOU2XXQxq"
+            "/projects?api_key=" +
+            this.apiKey
         )
         .then(response => {
-          this.designers[userID] = response;
+          //console.log('POTO');
+          //this.projects = response;
+          this.projects = response.data.projects.slice(0, 4);
+          this.numberOfCompletedAPIRequests++;
           this.$forceUpdate();
-          console.log(this.designers);
+          console.log(this.projects);
         })
         .catch(error => console.log(error.stack));
+    },
+
+    getUserInfo: function(userID) {
+      axios
+        .get(
+          "https://cors-anywhere.herokuapp.com/http://www.behance.net/v2/users/" +
+            userID +
+            "?api_key=" +
+            this.apiKey
+        )
+        .then(response => {
+          //console.log('PAJARO');
+          this.user.username = response.data.user.first_name; //response.data.user.username;
+          this.user.profilePicture = response.data.user.images[230];
+        })
+        .catch(error => console.log(error.stack));
+    },
+
+    getCardInfo: function(userID) {
+      this.getUserInfo(userID);
+      this.getProjectInfo(userID);
     }
   },
-
   mounted() {
-    this.getDisignerProjects("zhelieznova");
-    this.getDisignerProjects("arturdenys");
-    this.getDisignerProjects("R_G_Gomina");
-    this.getDisignerProjects("sashaillusign");
-    this.$root.$emit("pageChanged", "");
-    /*  axios.get('https://cors-anywhere.herokuapp.com/http://www.behance.net/v2/users/eldiablo?api_key=UhOrt3HySq95LUrfQWErTpR5KK12oq2Q')
-    .then(response => {
-      console.log(response)
-    }).catch(error => console.log(error.stack)) */
+    //project IDs
+
+    //this.getCardInfo('kilianschoenberger');
+    this.getCardInfo("s-d-g");
+    //this.getCardInfo('ajcaparo');
+    //this.getCardInfo('zhelieznova');
   }
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+.card {
+  height: 100%;
+}
+
 h1,
 h2 {
   font-weight: normal;
@@ -257,7 +218,6 @@ p {
 }
 .hero-icon {
   margin-bottom: 50px;
-
 }
 .Scroll-arrow {
   padding-bottom: 50px;
@@ -267,11 +227,12 @@ p {
 .arrow {
   height: 50px;
   width: 50px;
-  
 }
 .container {
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
   padding: 30px;
 }
-
+.card {
+  background-color: white;
+}
 </style>
