@@ -5,7 +5,9 @@
         <div class="column is-12-mobile is-3-tablet is-2-desktop is-1">
           <div class="columns is-mobile">
             <div class="column is-7">
+              <router-link to="/">
               <img class="image" id="logo" src="../assets/beonLogo.png" />
+              </router-link>
             </div>
           </div>
         </div>
