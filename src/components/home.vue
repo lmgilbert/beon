@@ -24,41 +24,10 @@
     </div>
     <!-- card containers -->
     <div class="container">
-
-      <div class="columns">
-
-        <div class="column">
-          <div id="card">
-            <div class="card-content">
-              <figure class="image is-50x50">
-                <img class="is-rounded" :src="user.profilePicture">
-              </figure>
-            </div>
-            <footer class="">
-              <div class="card-footer-item">{{ user.username }}</div>
-            </footer>
-          </div>
-        </div>
-
-        <div class="column" v-for="project in projects" :key="project.id">
-          <div class="card has-text-centered">
-            <div class="card-image">
-              <figure class="image is-4by3">
-                <img :src="project.covers.original">
-              </figure>
-            </div>
-            <div class="card-content">
-              <div class="content">
-                {{ project.name }}
-                <br>
-                <a>View More</a>
-                <br>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
+      <projectCard userID="s-d-g"></projectCard>
+      <projectCard userID="kilianschoenberger"></projectCard>
+      <projectCard userID="ajcaparo"></projectCard>
+      <projectCard userID="zhelieznova"></projectCard>
     </div>
 
   </div>
@@ -70,71 +39,20 @@
 import axios from "axios";
 import Vue from "vue";
 window.Vue = Vue;
-import ProjectCardContainer from "@/components/projectCardContainer";
+import projectCard from "@/components/projectCard";
 
 export default {
   name: "home",
-  components: { "project-card-container": ProjectCardContainer },
+  components: { "projectCard": projectCard },
   data() {
     return {
-      user: {
-        username: "",
-        profilePicture: ""
-      },
-      projects: [],
-      apiKey: "z4OTBPKghzwVWyp60e87u5KkZsxXxhCC", //This should be moved to an environment variable in the future //  z4OTBPKghzwVWyp60e87u5KkZsxXxhCC
-      numberOfCompletedAPIRequests: 0
     };
   },
 
   methods: {
-    getProjectInfo: function(userID) {
-      axios
-        .get(
-          "https://cors-anywhere.herokuapp.com/http://www.behance.net/v2/users/" +
-            userID +
-            "/projects?api_key=" +
-            this.apiKey
-        )
-        .then(response => {
-          //console.log('POTO');
-          //this.projects = response;
-          this.projects = response.data.projects.slice(0, 4);
-          this.numberOfCompletedAPIRequests++;
-          this.$forceUpdate();
-          console.log(this.projects);
-        })
-        .catch(error => console.log(error.stack));
-    },
-
-    getUserInfo: function(userID) {
-      axios
-        .get(
-          "https://cors-anywhere.herokuapp.com/http://www.behance.net/v2/users/" +
-            userID +
-            "?api_key=" +
-            this.apiKey
-        )
-        .then(response => {
-          //console.log('PAJARO');
-          this.user.username = response.data.user.first_name; //response.data.user.username;
-          this.user.profilePicture = response.data.user.images[230];
-        })
-        .catch(error => console.log(error.stack));
-    },
-
-    getCardInfo: function(userID) {
-      this.getUserInfo(userID);
-      this.getProjectInfo(userID);
-    }
   },
   mounted() {
-    //project IDs
 
-    //this.getCardInfo('kilianschoenberger');
-    this.getCardInfo("s-d-g");
-    //this.getCardInfo('ajcaparo');
-    //this.getCardInfo('zhelieznova');
   }
 };
 </script>
