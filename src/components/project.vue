@@ -4,8 +4,8 @@
       <img src="../assets/lg.dual-ring-loader.gif" id="load" />
     </div>
     <div v-if="!isLoading">
-      <h2 id="title">{{ title }}</h2>
       <div id="bottomPart">
+        <h2 id="title" class="has-text-left" :style="dynamicStyle">{{ title }}</h2>
         <img v-bind:src='work'/>
         <div id="stats">
           <font-awesome-icon class="svg" icon="heart" />{{ appreciations }}
@@ -52,7 +52,23 @@ export default {
       occupation: null,
       description: null,
       created: null,
+      r: null,
+      g: null,
+      b: null,
       isLoading: true
+    }
+  },
+  computed: {
+    dynamicStyle () {
+      let luminence = this.r + this.g + this.b;
+      if (luminence > 450) {
+        this.r = 0
+        this.g = 0
+        this.b = 0
+      }
+      return {
+        color: `rgb(${this.r}, ${this.g}, ${this.b})`
+      }
     }
   },
   methods: {
@@ -61,7 +77,7 @@ export default {
         .get(
           'https://cors-anywhere.herokuapp.com/http://www.behance.net/v2/projects/' +
             userID +
-            '?api_key=UhOrt3HySq95LUrfQWErTpR5KK12oq2Q'
+            '?api_key=PhrFshKN6P31JPijhKsra2Q63cyOqaBZ'
         )
         .then(response => {
           this.isLoading = false
@@ -75,6 +91,9 @@ export default {
           this.occupation = response.data.project.owners[0].occupation
           this.description = response.data.project.description
           this.created = response.data.project.published_on
+          this.r = response.data.project.colors[0].r
+          this.g = response.data.project.colors[0].g
+          this.b = response.data.project.colors[0].b
           this.$forceUpdate()
           console.log(this.project)
         })
@@ -103,9 +122,9 @@ h3 {
   text-align: right;
 }
 #title {
-  text-align: center;
   text-transform: capitalize;
-  margin: 65px 0;
+  margin: 40px 0px 10px 10px;
+  font-weight: bold;
 }
 .designerIcon {
   border-radius: 50%;
