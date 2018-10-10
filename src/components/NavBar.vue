@@ -78,6 +78,7 @@ h1 {
   padding: 30px 20px 20px;
   background-color: #e15361;
 }
+
 .transparent {
   background-color: rgba(88, 33, 38, 0.5);
   position: fixed;
@@ -86,9 +87,9 @@ h1 {
   top: 0;
   width: 100%;
 }
+
 h1 {
   font-size: 40px;
   color: white;
 }
-
 </style>

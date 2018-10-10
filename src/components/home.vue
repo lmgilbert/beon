@@ -86,7 +86,6 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .hero-body {
     background-image: url(../assets/Hero.png);
@@ -156,6 +155,7 @@ p {
   width: 100%;
   height: auto;
 }
+
 #facebook {
   height: 38px;
   width: 18px;
@@ -166,9 +166,9 @@ p {
   height: 42px;
   width: 42px;
 }
+
 #hidden-logo {
     height: 150px;
   width: 165px;
 }
-
 </style>

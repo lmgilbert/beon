@@ -96,57 +96,71 @@ img {
     width: auto;
     margin: auto
 }
+
 svg {
   display: inline-block;
   margin-right: 5px;
   color: #E15361;
 }
+
 #location {
   display: inline-block;
   color: #707070;
 }
+
 p {
   text-align: left;
   font-size: 16px;
 }
+
 a {
   text-align: left;
 }
+
 #contact {
   padding-top: 15px;
 }
+
 #title-name {
   color: black;
   font-weight: bold;
 }
+
 h5 {
   color: black;
   font-weight: bold;
 }
+
 #portfolio-details {
   margin-top: 40px;
 }
+
 #title-container {
   margin-top: 40px;
 }
+
 #title-container svg {
   font-size: 65px;
 }
+
 h2 {
   font-weight: bold;
 }
+
 #phone {
   height: 40px;
   width: 40px;
   top: 10px;
   position: relative;
 }
+
 #email {
   height: 40px;
   width: 40px;
   top: 10px;
   position: relative;
 }
+
 .contact-details {
   display: inline;
   font-size: 20px;
@@ -154,14 +168,18 @@ h2 {
   font-weight: bold;
   padding-left: 10px;
 }
+
 .contact-containers {
   padding-top: 10px;
   margin-left: 20px;
   margin-right: 5px;
 }
+
 #about {
   margin: 0px 20px;
+  padding-right: 40px;
 }
+
 #load {
   width: 150px;
   margin-left: auto;

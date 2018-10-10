@@ -18,7 +18,7 @@
           </div>
           <div class="column is-8-desktop is-7-tablet is-8-mobile" id="designerInfo">
             <h3>{{ designer }}</h3>
-            <p id="created">{{ created | moment("dddd, MMMM Do YYYY")}}</p>
+            <p id="created">{{ created | moment("dddd, MMMM Do YYYY") }}</p>
             <p id="description"> {{ description }}</p>
           </div>
         </div>
@@ -38,7 +38,7 @@ window.Vue = Vue
 export default {
   name: 'project',
   components: {
-    'comments': comments
+    comments: comments
   },
   data () {
     return {
@@ -97,21 +97,9 @@ export default {
           this.g = response.data.project.colors[0].g
           this.b = response.data.project.colors[0].b
           this.$forceUpdate()
-          console.log(this.project)
         })
-        .catch(error => console.log(error.stack))
-    }
-    // .get("http://api.icndb.com/jokes/random/10")
-  },
-  mounted () {
-    this.getDisignerProjects(this.$route.params.id)
-    this.$root.$emit('pageChanged', 'PORTFOLIO')
-  },
-  watch: {
-    $route (to, from) {
-      if (to.name === 'portfolio') {
-        this.$root.$emit('pageChanged', 'PORTFOLIO')
-      }
+        .catch(error => console.log(error.stack)
+        )
     }
   }
 }
@@ -120,22 +108,27 @@ export default {
 h2 {
   font-size: 50px;
 }
+
 h3 {
   font-size: 30px;
 }
+
 #bottomPart {
   width: 70%;
   margin-right: auto;
   margin-left: auto;
 }
+
 #stats {
   text-align: right;
 }
+
 #title {
   text-transform: capitalize;
   margin: 40px 0px 10px 10px;
   font-weight: bold;
 }
+
 .designerIcon {
   border-radius: 50%;
   height: 60px;
@@ -144,31 +137,41 @@ h3 {
 .column {
   text-align: left;
 }
+
 #created {
-  font-size: 13px;
+  font-size: 14px;
+  color: #9b9b9b;
 }
+
 #description {
-  font-size: 13px;
+  font-size: 14px;
 }
-.arrow-left, .arrow-right {
+
+.arrow-left,
+.arrow-right {
   text-align: center;
   display: inline;
   font-size: 40px;
   color: #df5563;
 }
+
 .arrow {
   color: #df5563;
 }
+
 .arrow:hover {
   color: black;
 }
+
 .svg {
   margin: 0 10px;
 }
+
 hr {
   margin: 40px auto;
   color: #8080801a;
 }
+
 #load {
   width: 150px;
   margin-left: auto;
