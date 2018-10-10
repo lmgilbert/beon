@@ -84,7 +84,7 @@ export default {
     // .get("http://api.icndb.com/jokes/random/10")
   },
   mounted () {
-     
+       
     this.getDisignerProjects(this.$route.params.id)
   }
 }
