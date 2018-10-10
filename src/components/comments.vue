@@ -13,7 +13,7 @@
           </div>
           <div class="column is-8-desktop is-8-tablet is-9-mobile">
             <a class="display-name" v-bind:href="contents.user.url">{{contents.user.display_name}}</a>
-            <p>{{contents.created_on | moment("dddd, MMMM Do YYYY")}}</p>
+            <p id="date">{{contents.created_on | moment("dddd, MMMM Do YYYY")}}</p>
             <p>{{contents.comment}}</p>
           </div>
         </div>
@@ -63,7 +63,7 @@ export default {
 h2 {
   font-size: 50px;
 }
-h3{
+h3 {
   font-size: 30px;
 }
 #stats {
@@ -77,31 +77,34 @@ h3{
   height: 60px;
   width: 60px;
 }
-.column{
+.column {
   text-align: left;
 }
-.arrow-left, .arrow-right{
+#date {
+  color: #9b9b9b;
+}
+.arrow-left, .arrow-right {
   text-align: center;
   display: inline;
   font-size: 40px;
   padding: 0;
 }
-.titleAndArrow{
+.titleAndArrow {
   margin: 50px 0;
 }
-.font-awesome-icon svg{
+.font-awesome-icon svg {
   margin: 2px;
 }
 .display-name {
   color: black;
   font-weight: bold;
+  font-size: 16px;
+}
+#comments p {
   font-size: 14px;
 }
-#comments p{
-  font-size: 13px;
-}
 
-h4{
+h4 {
   font-weight: bold;
   margin-bottom: 10px;
   color: black;

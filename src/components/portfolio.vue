@@ -59,7 +59,7 @@ export default {
   },
   methods: {
     getDisignerProjects: function (userID) {
-      axios.get('https://cors-anywhere.herokuapp.com/http://www.behance.net/v2/users/' + userID + '?api_key=lvKLHgLoGgeVqc8B6QOzUxRcS2NtbUYX')
+      axios.get('https://cors-anywhere.herokuapp.com/http://www.behance.net/v2/users/' + userID + '?api_key=Kfxa6RCoauPffiqhTUja6Y5QhsxOkvAE')
         .then(response => {
           this.isLoading = false
           this.designers[userID] = response
