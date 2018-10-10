@@ -80,7 +80,7 @@ export default {
         .get(
           'https://cors-anywhere.herokuapp.com/http://www.behance.net/v2/projects/' +
             userID +
-            '?api_key=UhOrt3HySq95LUrfQWErTpR5KK12oq2Q'
+            '?api_key=z4OTBPKghzwVWyp60e87u5KkZsxXxhCC'
         )
         .then(response => {
           this.project = response

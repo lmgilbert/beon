@@ -1,5 +1,7 @@
 <template>
   <div>
+      
+      <!-- .data.user.id -->
     <div class="background container is-desktop" v-if="designerInfoA !== null && designerProjectsA !== null">
       <!-- class container -->
       <div class="columns">
@@ -7,11 +9,13 @@
           <img class="user-image has-image-centered is-hidden-tablet-only" v-bind:src="designerInfoA.user.images[230]" /><br>
           <p class="user-name"> {{ designerInfoA.user.display_name }}</p>
         </div>
+        <!-- <router-link :to="{ path: 'project/' + { path: 'response.data.user.id' }}" append > -->
         <div class="card-container column" v-for='project in designerProjectsA.slice(0, 4)' :key="project.key">
           <img  v-bind:src='project.covers[202]' />
           <p class="is-hidden-tablet-only">{{ project.name }}</p>
           <a class="is-hidden-tablet-only" href="#"> View More </a>
         </div>
+        </router-link>
       </div>
     </div>
   
@@ -102,11 +106,12 @@
       // z4OTBPKghzwVWyp60e87u5KkZsxXxhCC
       // Kfxa6RCoauPffiqhTUja6Y5QhsxOkvAE
       // SPWgoDvDXuXxf735SKDCHf5vOU2XXQxq
+      // zF7qT0MNLRwLTKENGkqLBJL4u2BIpydE
     },
     mounted: function() {
       let url =
         "https://cors-anywhere.herokuapp.com/http://www.behance.net/v2/users/";
-      let apiKey = "?api_key=" + "z4OTBPKghzwVWyp60e87u5KkZsxXxhCC";
+      let apiKey = "?api_key=" + "ELx4Wb6sGGwWnIwP06LglFqOqeFoFDEM";
   
       /* repeat the following two blocks of code to add more designers */
   
@@ -115,7 +120,9 @@
         .then(response => {
           this.designerInfoA = response.data;
           this.apiRequestCompletionCount++;
+          console.log(response.data.user.id)
         })
+        
         .catch(error => console.log(error.stack));
   
       axios
