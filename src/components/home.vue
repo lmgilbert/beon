@@ -52,10 +52,7 @@
         },
     
         mounted() {
-    
-    
             this.$root.$emit("pageChanged", "");
-    
         }
     };
 </script>
