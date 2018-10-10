@@ -1,9 +1,6 @@
 <template>
   <div>
-      
-      <!-- .data.user.id -->
     <div class="background container is-desktop" v-if="designerInfoA !== null && designerProjectsA !== null">
-      <!-- class container -->
       <div class="columns">
         <div class="column is-2">
           <img class="user-image has-image-centered is-hidden-tablet-only" v-bind:src="designerInfoA.user.images[230]" /><br>

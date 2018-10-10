@@ -14,7 +14,6 @@ import Vue from 'vue'
 import axios from 'axios'
 import comments from './comments'
 import _ from 'lodash'; 
-// import './../node_modules/bulma/css/bulma.css'
 
 window.Vue = Vue
 export default {
@@ -39,7 +38,6 @@ export default {
         })
         .catch(error => console.log(error.stack))
     }
-    // .get("http://api.icndb.com/jokes/random/10")
   },
   mounted () {
     this.getDisignerProjects(this.$route.params.id)
