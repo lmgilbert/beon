@@ -112,7 +112,7 @@
         mounted: function() {
             let url =
                 "https://cors-anywhere.herokuapp.com/http://www.behance.net/v2/users/";
-            let apiKey = "?api_key=" + "zF7qT0MNLRwLTKENGkqLBJL4u2BIpydE";
+            let apiKey = "?api_key=" + "z4OTBPKghzwVWyp60e87u5KkZsxXxhCC";
     
             /* repeat the following two blocks of code to add more designers */
     
@@ -139,7 +139,7 @@
     
     
             axios
-                .get(url + "stoempstudio" + apiKey)
+                .get(url + "sashaillusign" + apiKey)
                 .then(response => {
                     this.designerInfoB = response.data;
                     this.apiRequestCompletionCount++;
@@ -147,7 +147,7 @@
                 .catch(error => console.log(error.stack));
     
             axios
-                .get(url + "stoempstudio" + "/projects" + apiKey)
+                .get(url + "sashaillusign" + "/projects" + apiKey)
                 .then(response => {
                     this.designerProjectsB = response.data.projects;
                     this.apiRequestCompletionCount++;
@@ -158,7 +158,7 @@
     
     
             axios
-                .get(url + "orange_zutto" + apiKey)
+                .get(url + "arturdenys" + apiKey)
                 .then(response => {
                     this.designerInfoC = response.data;
                     this.apiRequestCompletionCount++;
@@ -166,7 +166,7 @@
                 .catch(error => console.log(error.stack));
     
             axios
-                .get(url + "orange_zutto" + "/projects" + apiKey)
+                .get(url + "arturdenys" + "/projects" + apiKey)
                 .then(response => {
                     this.designerProjectsC = response.data.projects;
                     this.apiRequestCompletionCount++;
@@ -177,7 +177,7 @@
     
     
             axios
-                .get(url + "sashaillusign" + apiKey)
+                .get(url + "R_G_Gomina" + apiKey)
                 .then(response => {
                     this.designerInfoD = response.data;
                     this.apiRequestCompletionCount++;
@@ -185,7 +185,7 @@
                 .catch(error => console.log(error.stack));
     
             axios
-                .get(url + "sashaillusign" + "/projects" + apiKey)
+                .get(url + "R_G_Gomina" + "/projects" + apiKey)
                 .then(response => {
                     this.designerProjectsD = response.data.projects;
                     this.apiRequestCompletionCount++;

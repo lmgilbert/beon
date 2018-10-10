@@ -50,7 +50,7 @@ export default {
   data () {
     return {
       designers: [],
-      numberOfCompletedAPIRequests: 0
+      numberOfCompletedAPIRequests: 0,
       apiRequestComplete: false
     }
   },
@@ -61,7 +61,7 @@ export default {
         .get(
           'https://cors-anywhere.herokuapp.com/http://www.behance.net/v2/users/' +
             userID +
-            '?api_key=SPWgoDvDXuXxf735SKDCHf5vOU2XXQxq'
+            '?api_key=ELx4Wb6sGGwWnIwP06LglFqOqeFoFDEM'
         )
         .then(response => {
           this.designers[userID] = response
