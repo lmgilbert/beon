@@ -4,13 +4,13 @@
       <!-- class container -->
       <div class="columns">
         <div class="column is-2">
-          <img class="user-image" v-bind:src="designerInfoA.user.images[230]" /><br>
+          <img class="user-image has-image-centered is-hidden-tablet-only" v-bind:src="designerInfoA.user.images[230]" /><br>
           <p class="user-name"> {{ designerInfoA.user.display_name }}</p>
         </div>
         <div class="card-container column" v-for='project in designerProjectsA.slice(0, 4)' :key="project.key">
-          <img v-bind:src='project.covers[202]' />
-          <p>{{ project.name }}</p>
-          <a href="#"> View More </a>
+          <img  v-bind:src='project.covers[202]' />
+          <p class="is-hidden-tablet-only">{{ project.name }}</p>
+          <a class="is-hidden-tablet-only" href="#"> View More </a>
         </div>
       </div>
     </div>
@@ -22,13 +22,13 @@
       <!-- class container -->
       <div class="columns">
         <div class="column is-2">
-          <img class="user-image" v-bind:src="designerInfoB.user.images[230]" /><br>
+          <img class="user-image is-hidden-tablet-only has-image-centered" v-bind:src="designerInfoB.user.images[230]" /><br>
           <p class="user-name"> {{ designerInfoB.user.display_name }}</p>
         </div>
         <div class="card-container column" v-for='project in designerProjectsB.slice(0, 4)' :key="project.key">
           <img v-bind:src='project.covers[202]' />
-          <p>{{ project.name }}</p>
-          <a href="#"> View More </a>
+          <p class="is-hidden-tablet-only">{{ project.name }}</p>
+          <a class="is-hidden-tablet-only" href="#"> View More </a>
         </div>
       </div>
     </div>
@@ -39,13 +39,13 @@
       <!-- class container -->
       <div class="columns">
         <div class="column is-2">
-          <img class="user-image" v-bind:src="designerInfoC.user.images[230]" /><br>
+          <img class="user-image is-hidden-tablet-only has-image-centered" v-bind:src="designerInfoC.user.images[230]" /><br>
           <p class="user-name"> {{ designerInfoC.user.display_name }}</p>
         </div>
         <div class="card-container column" v-for='project in designerProjectsC.slice(0, 4)' :key="project.key">
-          <img v-bind:src='project.covers[202]' />
-          <p>{{ project.name }}</p>
-          <a href="#"> View More </a>
+          <img class="hidden-mobile" v-bind:src='project.covers[202]' />
+          <p class="is-hidden-tablet-only hidden-mobile">{{ project.name }}</p>
+          <a class="is-hidden-tablet-only hidden-mobile" href="#"> View More </a>
         </div>
       </div>
     </div>
@@ -56,13 +56,13 @@
       <!-- class container -->
       <div class="columns">
         <div class="column is-2">
-          <img class="user-image" v-bind:src="designerInfoD.user.images[230]" /><br>
+          <img class="user-image is-hidden-tablet-only has-image-centered" v-bind:src="designerInfoD.user.images[230]" /><br>
           <p class="user-name"> {{ designerInfoD.user.display_name }}</p>
         </div>
         <div class="card-container column" v-for='project in designerProjectsD.slice(0, 4)' :key="project.key">
           <img v-bind:src='project.covers[202]' />
-          <p>{{ project.name }}</p>
-          <a href="#"> View More </a>
+          <p class="is-hidden-tablet-only">{{ project.name }}</p>
+          <a class="is-hidden-tablet-only" href="#"> View More </a>
         </div>
       </div>
     </div>
@@ -226,12 +226,14 @@
   .user-image {
     border-radius: 50%;
     width: auto;
-    padding: 30px;
   }
   
   .column {
     margin-top: auto;
     padding: 0;
+    margin-right: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
   }
   
   .user {
@@ -250,4 +252,19 @@
   .is-2{
     margin-right: 40px;
   }
+.has-image-centered {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+@media only screen and (max-width: 768px){
+    .column{
+        margin-bottom: 30px;
+        margin-right: 0;
+        /* box-shadow: none; */
+    }
+    .columns .column:nth-child(2){
+        display: none !important;
+    }
+}
 </style>
