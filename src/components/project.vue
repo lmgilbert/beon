@@ -78,7 +78,7 @@ export default {
         .get(
           'https://cors-anywhere.herokuapp.com/http://www.behance.net/v2/projects/' +
             userID +
-            '?api_key=v5rFuoo114eTmVB5dKjaVHsbAaMu11gY'
+            '?api_key=SPWgoDvDXuXxf735SKDCHf5vOU2XXQxq'
         )
         .then(response => {
           this.isLoading = false
@@ -97,10 +97,14 @@ export default {
           this.g = response.data.project.colors[0].g
           this.b = response.data.project.colors[0].b
           this.$forceUpdate()
+          console.log(this.response)
         })
         .catch(error => console.log(error.stack)
         )
     }
+  },
+  mounted () {
+    this.getDisignerProjects(this.$route.params.id)
   }
 }
 </script>
