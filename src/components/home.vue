@@ -32,29 +32,30 @@
         <div class="Scroll-arrow">
             <img class="arrow" src="../assets/arrow.png">
         </div>
-        <p v-if='numberOfCompletedAPIRequests == 4'>{{ designers.zhelieznova.data }}</p>
+        <project-card-container />
     </div>
 </template>
 
 <script>
+
 import axios from 'axios'
 import Vue from 'vue'
 window.Vue = Vue
+import projectCardContainer from "./projectCardContainer";
 export default {
   name: 'home',
+  components: {
+      "project-card-container": projectCardContainer
+  },
   data () {
     return {
       designers: [],
       numberOfCompletedAPIRequests: 0
+      apiRequestComplete: false
     }
   },
 
   methods: {
-    // ELx4Wb6sGGwWnIwP06LglFqOqeFoFDEM
-    // v5rFuoo114eTmVB5dKjaVHsbAaMu11gY
-    // z4OTBPKghzwVWyp60e87u5KkZsxXxhCC
-    // Kfxa6RCoauPffiqhTUja6Y5QhsxOkvAE
-    // SPWgoDvDXuXxf735SKDCHf5vOU2XXQxq
     getDisignerProjects: function (userID) {
       axios
         .get(

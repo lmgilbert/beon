@@ -34,15 +34,20 @@
         </div>
       </div>
     </div>
+    <projectCard />
   </div>
 </template>
 
 <script>
 import axios from 'axios'
 import Vue from 'vue'
+import projectCard from './projectCard'
 window.Vue = Vue
 export default {
   name: 'portfolio',
+  components: {
+    'projectCard': projectCard
+  },
   data () {
     return {
       designers: [],
