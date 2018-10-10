@@ -52,6 +52,7 @@ export default {
       occupation: null,
       description: null,
       created: null,
+      firstname: null,
       r: null,
       g: null,
       b: null,
@@ -60,11 +61,11 @@ export default {
   },
   computed: {
     dynamicStyle () {
-      let luminence = this.r + this.g + this.b;
+      let luminence = this.r + this.g + this.b
       if (luminence > 450) {
-        this.r = 0
-        this.g = 0
-        this.b = 0
+        return {
+          color: `rgb(0, 0, 0)`
+        }
       }
       return {
         color: `rgb(${this.r}, ${this.g}, ${this.b})`
@@ -87,6 +88,7 @@ export default {
           this.appreciations = response.data.project.stats.appreciations
           this.views = response.data.project.stats.views
           this.designer = response.data.project.owners[0].display_name
+          this.firstname = response.data.project.owners[0].first_name
           this.designerIcon = response.data.project.owners[0].images[276]
           this.occupation = response.data.project.owners[0].occupation
           this.description = response.data.project.description
@@ -103,6 +105,14 @@ export default {
   },
   mounted () {
     this.getDisignerProjects(this.$route.params.id)
+    this.$root.$emit('pageChanged', 'PORTFOLIO')
+  },
+  watch: {
+    $route (to, from) {
+      if (to.name === 'portfolio') {
+        this.$root.$emit('pageChanged', 'PORTFOLIO')
+      }
+    }
   }
 }
 </script>
