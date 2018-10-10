@@ -97,13 +97,15 @@ export default {
           this.g = response.data.project.colors[0].g
           this.b = response.data.project.colors[0].b
           this.$forceUpdate()
-          console.log(this.response)
+          this.$root.$emit('pageChanged', this.designer + '\'s Project')
+          console.log(this.project)
         })
         .catch(error => console.log(error.stack)
         )
     }
   },
   mounted () {
+       
     this.getDisignerProjects(this.$route.params.id)
   }
 }

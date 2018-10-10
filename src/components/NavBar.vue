@@ -54,11 +54,11 @@ export default {
 </script>
 
 <style scoped>
-h1 {
+h1[data-v-4295d220] {
   color: white;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bold;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
 }
 
 #logo {

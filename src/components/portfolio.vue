@@ -73,6 +73,7 @@ export default {
           this.bio = this.designers[userID].data.user.sections
           this.behanceurl = this.designers[userID].data.user.url
           console.log(this.designers)
+          this.$root.$emit('pageChanged', this.fullName + '\'s Project')
         }).catch(error => console.log(error.stack))
     }
   },

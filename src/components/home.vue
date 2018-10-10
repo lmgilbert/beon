@@ -3,7 +3,9 @@
         <div class="hero-body">
             <div class="container has-text-centered">
                <p class="title2">
+                 <router-link to="/">
                     <img id="hidden-logo" class="hidden-logo is-hidden-desktop is-hidden-tablet" src="../assets/beonLogo.png" />
+                </router-link>
                 </p>
                 <p class="title is-hidden-mobile">
                     bēon
@@ -12,7 +14,7 @@
                     Dēsign Agēncy
                 </p>
                 <p class="subtitle2">
-                    Profssional Portfolios
+                    Professional Portfolios
                 </p>
                 <p class="subtitle3">
                     <div class="number is-hidden-mobile"><img id="email" src="../assets/white-email.png" />
@@ -30,8 +32,6 @@
         <div class="Scroll-arrow">
             <img class="arrow" src="../assets/arrow.png">
         </div>
-
-        <h2></h2>
         <p v-if='numberOfCompletedAPIRequests == 4'>{{ designers.zhelieznova.data }}</p>
     </div>
 </template>
@@ -52,7 +52,7 @@ export default {
   methods: {
     // ELx4Wb6sGGwWnIwP06LglFqOqeFoFDEM
     // v5rFuoo114eTmVB5dKjaVHsbAaMu11gY
-    //  z4OTBPKghzwVWyp60e87u5KkZsxXxhCC
+    // z4OTBPKghzwVWyp60e87u5KkZsxXxhCC
     // Kfxa6RCoauPffiqhTUja6Y5QhsxOkvAE
     // SPWgoDvDXuXxf735SKDCHf5vOU2XXQxq
     getDisignerProjects: function (userID) {
