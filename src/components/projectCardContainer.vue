@@ -220,7 +220,7 @@
   }
   
   .background {
-    background-color: #f8f8f8;
+    background-color: #f7f7f7;
     padding-top: 30px;
     padding-bottom: 30px;
     padding-left: 40px;

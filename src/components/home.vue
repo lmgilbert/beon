@@ -50,7 +50,7 @@ export default {
   data () {
     return {
       designers: [],
-      numberOfCompletedAPIRequests: 0
+      numberOfCompletedAPIRequests: 0,
       apiRequestComplete: false
     }
   },
