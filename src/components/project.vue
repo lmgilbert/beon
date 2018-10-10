@@ -76,6 +76,7 @@ export default {
           this.description = response.data.project.description
           this.created = response.data.project.published_on
           this.$forceUpdate()
+          this.$root.$emit('pageChanged', this.designer + '\'s Project')
           console.log(this.project)
         })
         .catch(error => console.log(error.stack))
@@ -83,6 +84,7 @@ export default {
     // .get("http://api.icndb.com/jokes/random/10")
   },
   mounted () {
+     
     this.getDisignerProjects(this.$route.params.id)
   }
 }
