@@ -12,7 +12,7 @@
           <p class="is-hidden-tablet-only">{{ project.name }}</p>
           <a class="is-hidden-tablet-only" href="#"> View More </a>
         </div>
-        </router-link>
+        
       </div>
     </div>
   
