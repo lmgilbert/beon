@@ -52,7 +52,7 @@ export default {
   methods: {
     // ELx4Wb6sGGwWnIwP06LglFqOqeFoFDEM
     // v5rFuoo114eTmVB5dKjaVHsbAaMu11gY
-    //  z4OTBPKghzwVWyp60e87u5KkZsxXxhCC
+    // z4OTBPKghzwVWyp60e87u5KkZsxXxhCC
     // Kfxa6RCoauPffiqhTUja6Y5QhsxOkvAE
     // SPWgoDvDXuXxf735SKDCHf5vOU2XXQxq
     getDisignerProjects: function (userID) {
