@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- Snow's Code -->
     <div v-if="isLoading" class="image">
       <img src="../assets/lg.dual-ring-loader.gif" id="load" />
     </div>
