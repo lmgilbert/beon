@@ -33,8 +33,8 @@
           </div>
         </div>
       </div>
+      <projectCard />
     </div>
-    <projectCard />
   </div>
 </template>
 
