@@ -52,8 +52,6 @@
                     </router-link>
                 </div>
             </div>
-      </div>
-    </div>
         </div>
         <div class="background container" v-if="designerInfoD !== null && designerProjectsD !== null">
             <!-- class container -->
