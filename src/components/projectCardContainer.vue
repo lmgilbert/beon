@@ -21,7 +21,7 @@
             <!-- class container -->
             <div class="columns">
                 <div class="column is-2">
-                    <router-link :to="{ path: 'portfolio/' + designerInfoA.user.id}" append>
+                    <router-link :to="{ path: 'portfolio/' + designerInfoB.user.id}" append>
                     <img class="user-image is-hidden-tablet-only has-image-centered" v-bind:src="designerInfoB.user.images[230]" /><br>
                     <p class="user-name"> {{ designerInfoB.user.display_name }}</p>
                     </router-link>
@@ -39,7 +39,7 @@
             <!-- class container -->
             <div class="columns">
                 <div class="column is-2">
-                    <router-link :to="{ path: 'portfolio/' + designerInfoA.user.id}" append>
+                    <router-link :to="{ path: 'portfolio/' + designerInfoC.user.id}" append>
                     <img class="user-image is-hidden-tablet-only has-image-centered" v-bind:src="designerInfoC.user.images[230]" /><br>
                     <p class="user-name"> {{ designerInfoC.user.display_name }}</p>
                     </router-link>
@@ -57,7 +57,7 @@
             <!-- class container -->
             <div class="columns">
                 <div class="column is-2">
-                    <router-link :to="{ path: 'portfolio/' + designerInfoA.user.id}" append>
+                    <router-link :to="{ path: 'portfolio/' + designerInfoD.user.id}" append>
                     <img class="user-image is-hidden-tablet-only has-image-centered" v-bind:src="designerInfoD.user.images[230]" /><br>
                     <p class="user-name"> {{ designerInfoD.user.display_name }}</p>
                     </router-link>
@@ -105,7 +105,7 @@ export default {
   mounted: function () {
     let url =
         'https://cors-anywhere.herokuapp.com/http://www.behance.net/v2/users/'
-    let apiKey = '?api_key=' + 'SPWgoDvDXuXxf735SKDCHf5vOU2XXQxq'
+    let apiKey = '?api_key=' + 'Kfxa6RCoauPffiqhTUja6Y5QhsxOkvAE'
 
     /* repeat the following two blocks of code to add more designers */
 

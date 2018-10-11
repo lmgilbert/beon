@@ -1,9 +1,10 @@
 <template>
   <div id="projectCard" v-if='project !== null'>
+    <!-- {{ projects }} -->
       <div class="container-fullhd columns" v-for='row in projects' :key='row.key'>
         <div class="column" v-for="project in row" :key="project.key">
           <router-link :to="{ path: '/project/' + project.id}" append>
-            <img v-bind:src='project.covers.original'/>
+            <img v-bind:src='project.covers[202]'/>
           </router-link>
         </div>
       </div>
@@ -31,7 +32,7 @@ export default {
       axios
         .get(
           'https://cors-anywhere.herokuapp.com/http://www.behance.net/v2/users/' + userID +
-            '/projects?api_key=SPWgoDvDXuXxf735SKDCHf5vOU2XXQxq'
+            '/projects?api_key=v5rFuoo114eTmVB5dKjaVHsbAaMu11gY'
         )
         .then(response => {
           this.projects = _.chunk(response.data.projects, 3)
