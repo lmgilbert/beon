@@ -5,13 +5,13 @@
     </div>
     <div v-if="!isLoading">
       <div id="projectCard" v-if='project !== null'>
-         <div class="container-fullhd columns" v-for='row in projects' :key='row.key'>
-            <div class="column" v-for="project in row" :key="project.key">
-              <router-link :to="{ path: '/project/' + project.id}" append>
-                <img v-bind:src='project.covers[202]' />
-              </router-link>
-            </div>
-         </div>
+        <div class="container-fullhd columns" v-for='row in projects' :key='row.key'>
+          <div class="column" v-for="project in row" :key="project.key">
+            <router-link :to="{ path: '/project/' + project.id}" append>
+              <img v-bind:src='project.covers[202]' />
+            </router-link>
+          </div>
+        </div>
       </div>
     </div>
   </div>

@@ -1,4 +1,5 @@
 <template>
+  <!-- Lauren's Code -->
   <div id="project-comment" class="has-text-left">
     <h4>Comments</h4>
     <div v-if="isLoading" class="image">
