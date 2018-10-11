@@ -39,7 +39,7 @@ export default {
       axios
         .get(
           'https://cors-anywhere.herokuapp.com/http://www.behance.net/v2/users/' + userID +
-            '/projects?api_key=PhrFshKN6P31JPijhKsra2Q63cyOqaBZ'
+            '/projects?api_key=SPWgoDvDXuXxf735SKDCHf5vOU2XXQxq'
         )
         .then(response => {
           this.isLoading = false

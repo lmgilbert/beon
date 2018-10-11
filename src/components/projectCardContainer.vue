@@ -35,44 +35,61 @@
                         <img v-bind:src='project.covers[202]' />
                         <p class="is-hidden-tablet-only">{{ project.name }}</p>
                         <a class="is-hidden-tablet-only" href="#"> View More </a>
-                        </router-link>
-                    </div>
+                    </router-link>
                 </div>
             </div>
-            <div class="background container" v-if="designerInfoC !== null && designerProjectsC !== null">
-                <!-- class container -->
-                <div class="columns">
-                    <div class="column is-2">
-                        <router-link :to="{ path: 'portfolio/' + designerInfoA.user.id}" append>
-                        <img class="user-image is-hidden-tablet-only has-image-centered" v-bind:src="designerInfoC.user.images[230]" /><br>
-                        <p class="user-name"> {{ designerInfoC.user.display_name }}</p>
-                        </router-link>
-                    </div>
-                    <div class="card-container column" v-for='project in designerProjectsC.slice(0, 4)' :key="project.key">
-                        <router-link :to="{ path: 'project/' + project.id}" append>
-                        <img class="hidden-mobile" v-bind:src='project.covers[202]' />
-                        <p class="is-hidden-tablet-only hidden-mobile">{{ project.name }}</p>
-                        <a class="is-hidden-tablet-only hidden-mobile" href="#"> View More </a>
-                        </router-link>
-                    </div>
+        </div>
+        <div class="background container" v-if="designerInfoB !== null && designerProjectsB !== null">
+            <!-- class container -->
+            <div class="columns">
+                <div class="column is-2">
+                    <router-link :to="{ path: 'portfolio/' + designerInfoB.user.id}" append>
+                    <img class="user-image is-hidden-tablet-only has-image-centered" v-bind:src="designerInfoB.user.images[230]" /><br>
+                    <p class="user-name"> {{ designerInfoB.user.display_name }}</p>
+                    </router-link>
+                </div>
+                <div class="card-container column" v-for='project in designerProjectsB.slice(0, 4)' :key="project.key">
+                    <router-link :to="{ path: 'project/' + project.id}" append>
+                    <img v-bind:src='project.covers[202]' />
+                    <p class="is-hidden-tablet-only">{{ project.name }}</p>
+                    <a class="is-hidden-tablet-only" href="#"> View More </a>
+                    </router-link>
                 </div>
             </div>
-            <div class="background container" v-if="designerInfoD !== null && designerProjectsD !== null">
-                <!-- class container -->
-                <div class="columns">
-                    <div class="column is-2">
-                        <router-link :to="{ path: 'portfolio/' + designerInfoA.user.id}" append>
-                        <img class="user-image is-hidden-tablet-only has-image-centered" v-bind:src="designerInfoD.user.images[230]" /><br>
-                        <p class="user-name"> {{ designerInfoD.user.display_name }}</p>
-                        </router-link>
-                    </div>
-                    <div class="card-container column" v-for='project in designerProjectsD.slice(0, 4)' :key="project.key">
-                        <router-link :to="{ path: 'project/' + project.id}" append>
-                        <img v-bind:src='project.covers[202]' />
-                        <p class="is-hidden-tablet-only">{{ project.name }}</p>
-                        <a class="is-hidden-tablet-only" href="#"> View More </a>
-                        </router-link>
-                    </div>
+        </div>
+        <div class="background container" v-if="designerInfoC !== null && designerProjectsC !== null">
+            <!-- class container -->
+            <div class="columns">
+                <div class="column is-2">
+                    <router-link :to="{ path: 'portfolio/' + designerInfoC.user.id}" append>
+                    <img class="user-image is-hidden-tablet-only has-image-centered" v-bind:src="designerInfoC.user.images[230]" /><br>
+                    <p class="user-name"> {{ designerInfoC.user.display_name }}</p>
+                    </router-link>
+                </div>
+                <div class="card-container column" v-for='project in designerProjectsC.slice(0, 4)' :key="project.key">
+                    <router-link :to="{ path: 'project/' + project.id}" append>
+                    <img class="hidden-mobile" v-bind:src='project.covers[202]' />
+                    <p class="is-hidden-tablet-only hidden-mobile">{{ project.name }}</p>
+                    <a class="is-hidden-tablet-only hidden-mobile" href="#"> View More </a>
+                    </router-link>
+                </div>
+            </div>
+        </div>
+        <div class="background container" v-if="designerInfoD !== null && designerProjectsD !== null">
+            <!-- class container -->
+            <div class="columns">
+                <div class="column is-2">
+                    <router-link :to="{ path: 'portfolio/' + designerInfoD.user.id}" append>
+                    <img class="user-image is-hidden-tablet-only has-image-centered" v-bind:src="designerInfoD.user.images[230]" /><br>
+                    <p class="user-name"> {{ designerInfoD.user.display_name }}</p>
+                    </router-link>
+                </div>
+                <div class="card-container column" v-for='project in designerProjectsD.slice(0, 4)' :key="project.key">
+                    <router-link :to="{ path: 'project/' + project.id}" append>
+                    <img v-bind:src='project.covers[202]' />
+                    <p class="is-hidden-tablet-only">{{ project.name }}</p>
+                    <a class="is-hidden-tablet-only" href="#"> View More </a>
+                    </router-link>
                 </div>
             </div>
         </div>

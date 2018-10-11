@@ -61,7 +61,7 @@ export default {
         .get(
           'https://cors-anywhere.herokuapp.com/http://www.behance.net/v2/users/' +
             userID +
-            '?api_key=ELx4Wb6sGGwWnIwP06LglFqOqeFoFDEM'
+            '?api_key=zF7qT0MNLRwLTKENGkqLBJL4u2BIpydE'
         )
         .then(response => {
           this.designers[userID] = response
