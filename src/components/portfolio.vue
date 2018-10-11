@@ -1,4 +1,5 @@
 <template>
+  <!-- Lauren's Code -->
   <div class="portfolio">
     <div v-if="isLoading" class="image">
       <img src="../assets/lg.dual-ring-loader.gif" id="load" />
