@@ -105,7 +105,7 @@ export default {
   mounted: function () {
     let url =
         'https://cors-anywhere.herokuapp.com/http://www.behance.net/v2/users/'
-    let apiKey = '?api_key=' + 'z4OTBPKghzwVWyp60e87u5KkZsxXxhCC'
+    let apiKey = '?api_key=' + 'SPWgoDvDXuXxf735SKDCHf5vOU2XXQxq'
 
     /* repeat the following two blocks of code to add more designers */
 
@@ -195,8 +195,7 @@ a {
     color: black;
     font-weight: bold;
   }
-  
-  .background {
+.background {
     background-color: #f7f7f7;
     padding-top: 30px;
     padding-bottom: 30px;

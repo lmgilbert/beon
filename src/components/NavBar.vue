@@ -95,6 +95,5 @@ h1 {
   color: white;
   text-transform: uppercase;
   text-align: left;
-  
 }
 </style>
