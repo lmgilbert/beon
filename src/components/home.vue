@@ -74,7 +74,7 @@ export default {
   },
 
   mounted () {
-    this.getDisignerProjects('zhelieznova')
+    this.getDisignerProjects('carlocadenas')
     this.getDisignerProjects('arturdenys')
     this.getDisignerProjects('R_G_Gomina')
     this.getDisignerProjects('sashaillusign')

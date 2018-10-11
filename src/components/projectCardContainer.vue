@@ -108,11 +108,11 @@ export default {
   mounted: function () {
     let url =
         'https://cors-anywhere.herokuapp.com/http://www.behance.net/v2/users/'
-    let apiKey = '?api_key=' + 'PhrFshKN6P31JPijhKsra2Q63cyOqaBZ'
+    let apiKey = '?api_key=' + 'ELx4Wb6sGGwWnIwP06LglFqOqeFoFDEM'
 
     /* repeat the following two blocks of code to add more designers */
     axios
-      .get(url + 'zhelieznova' + apiKey)
+      .get(url + 'carlocadenas' + apiKey)
       .then(response => {
         this.isLoading = false
         this.designerInfoA = response.data
@@ -121,7 +121,7 @@ export default {
       })
       .catch(error => console.log(error.stack))
     axios
-      .get(url + 'zhelieznova' + '/projects' + apiKey)
+      .get(url + 'carlocadenas' + '/projects' + apiKey)
       .then(response => {
         this.designerProjectsA = response.data.projects
         this.apiRequestCompletionCount++
