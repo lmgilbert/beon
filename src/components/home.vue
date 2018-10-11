@@ -1,47 +1,43 @@
 <template>
-    <div class="hello">
-        <div class="hero-body">
-            <div class="container has-text-centered">
-               <p class="title2">
-                 <router-link to="/">
-                    <img id="hidden-logo" class="hidden-logo is-hidden-desktop is-hidden-tablet" src="../assets/beonLogo.png" />
-                </router-link>
-                </p>
-                <p class="title is-hidden-mobile">
-                    bēon
-                </p>
-                <p class="subtitle">
-                    Dēsign Agēncy
-                </p>
-                <p class="subtitle2">
-                    Professional Portfolios
-                </p>
-                <p class="subtitle3">
-                    <div class="number is-hidden-mobile"><img id="email" src="../assets/white-email.png" />
-                        <p>bēon@design.co.nz</p>
-                    </div>
-                    <div class="number is-hidden-mobile"><img id="phone" src="../assets/white-phone.png" />
-                        <p>03 321 12345</p>
-                    </div>
-                    <p class="subtitle4">
-                        <img id="facebook" class="facebook is-hidden-desktop is-hidden-tablet" src="../assets/facebook.png" />
-                        <img id="twitter" class="twitter is-hidden-desktop is-hidden-tablet" src="../assets/twitter.png" />
-                    </p>
-            </div>
-        </div>
-        <div class="Scroll-arrow">
-            <img class="arrow" src="../assets/arrow.png">
-        </div>
-        <project-card-container />
+  <div class="hello">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <p class="title2">
+          <router-link to="/">
+            <img id="hidden-logo" class="hidden-logo is-hidden-desktop is-hidden-tablet" src="../assets/beonLogo.png" />
+          </router-link>
+        </p>
+        <p class="title is-hidden-mobile">bēon</p>
+        <p class="subtitle">Dēsign Agēncy</p>
+        <p class="subtitle2">Professional Portfolios</p>
+        <p class="subtitle3">
+          <div class="number is-hidden-mobile">
+            <img id="email" src="../assets/white-email.png" />
+            <p>bēon@design.co.nz</p>
+          </div>
+          <div class="number is-hidden-mobile">
+            <img id="phone" src="../assets/white-phone.png" />
+            <p>03 321 12345</p>
+          </div>
+        <p class="subtitle4">
+          <img id="facebook" class="facebook is-hidden-desktop is-hidden-tablet" src="../assets/facebook.png" />
+          <img id="twitter" class="twitter is-hidden-desktop is-hidden-tablet" src="../assets/twitter.png" />
+        </p>
+      </div>
     </div>
+    <div class="Scroll-arrow">
+        <img class="arrow" src="../assets/arrow.png">
+    </div>
+    <project-card-container />
+  </div>
 </template>
 
 <script>
-
 import axios from 'axios'
 import Vue from 'vue'
 import projectCardContainer from './projectCardContainer'
 window.Vue = Vue
+
 export default {
   name: 'home',
   components: {
@@ -54,7 +50,6 @@ export default {
       apiRequestComplete: false
     }
   },
-
   methods: {
     getDisignerProjects: function (userID) {
       axios
@@ -67,22 +62,16 @@ export default {
           this.designers[userID] = response
           this.$forceUpdate()
           this.numberOfCompletedAPIRequests++
-          console.log(this.designers)
         })
         .catch(error => console.log(error.stack))
     }
   },
-
   mounted () {
     this.getDisignerProjects('carlocadenas')
     this.getDisignerProjects('arturdenys')
     this.getDisignerProjects('R_G_Gomina')
     this.getDisignerProjects('sashaillusign')
     this.$root.$emit('pageChanged', '')
-    /*  axios.get('https://cors-anywhere.herokuapp.com/http://www.behance.net/v2/users/eldiablo?api_key=UhOrt3HySq95LUrfQWErTpR5KK12oq2Q')
-      .then(response => {
-        console.log(response)
-      }).catch(error => console.log(error.stack)) */
   }
 }
 </script>
@@ -93,6 +82,7 @@ export default {
     background-size: cover;
     height: 700px;
 }
+
 .title {
   font-size: 90px;
   font-weight: 350;

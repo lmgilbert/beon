@@ -24,11 +24,11 @@
         </div>
         <div class="column column is-4-fullhd is-11-widescreen is-11-desktop is-12-tablet is-12-mobile" id="contact">
           <div class="contact-containers">
-            <img id="email" src="../assets/email.png">
+            <img id="email" src="../assets/email.png" />
             <p class="contact-details"> {{ name }}@design.co.nz</p>
           </div>
           <div class="contact-containers">
-            <img id="phone" src="../assets/phone.png">
+            <img id="phone" src="../assets/phone.png" />
             <p class="contact-details">03 321 12345</p>
           </div>
         </div>
@@ -43,6 +43,7 @@ import axios from 'axios'
 import Vue from 'vue'
 import projectCard from './projectCard'
 window.Vue = Vue
+
 export default {
   name: 'portfolio',
   components: {
@@ -77,7 +78,6 @@ export default {
           this.picture = this.designers[userID].data.user.images[230]
           this.bio = this.designers[userID].data.user.sections
           this.behanceurl = this.designers[userID].data.user.url
-          console.log(this.designers)
           this.$root.$emit('pageChanged', this.fullName + '\'s Project')
         }).catch(error => console.log(error.stack))
     }

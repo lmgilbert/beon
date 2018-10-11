@@ -6,7 +6,7 @@
     <div v-if="!isLoading">
       <div id="bottomPart">
         <h2 id="title" class="has-text-left" :style="dynamicStyle">{{ title }}</h2>
-        <img v-bind:src='work'/>
+        <img v-bind:src='work' />
         <div id="stats">
           <font-awesome-icon class="svg" icon="heart" />{{ appreciations }}
           <font-awesome-icon class="svg" icon="eye" />{{ views }}
@@ -35,6 +35,7 @@ import axios from 'axios'
 import comments from './comments'
 Vue.use(require('vue-moment'))
 window.Vue = Vue
+
 export default {
   name: 'project',
   components: {
@@ -98,7 +99,6 @@ export default {
           this.b = response.data.project.colors[0].b
           this.$forceUpdate()
           this.$root.$emit('pageChanged', this.designer + '\'s Project')
-          console.log(this.project)
         })
         .catch(error => console.log(error.stack)
         )
@@ -109,6 +109,7 @@ export default {
   }
 }
 </script>
+
 <style scoped>
 h2 {
   font-size: 50px;
@@ -139,6 +140,7 @@ h3 {
   height: 60px;
   width: 60px;
 }
+
 .column {
   text-align: left;
 }

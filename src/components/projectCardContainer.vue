@@ -22,7 +22,6 @@
                 </div>
             </div>
             <div class="background container" v-if="designerInfoB !== null && designerProjectsB !== null">
-                <!-- class container -->
                 <div class="columns">
                     <div class="column is-2">
                         <router-link :to="{ path: 'portfolio/' + designerInfoA.user.id}" append>
@@ -41,37 +40,35 @@
             </div>
         </div>
         <div class="background container" v-if="designerInfoC !== null && designerProjectsC !== null">
-            <!-- class container -->
             <div class="columns">
                 <div class="column is-2">
                     <router-link :to="{ path: 'portfolio/' + designerInfoC.user.id}" append>
-                    <img class="user-image is-hidden-tablet-only has-image-centered" v-bind:src="designerInfoC.user.images[230]" /><br>
-                    <p class="user-name"> {{ designerInfoC.user.display_name }}</p>
+                        <img class="user-image is-hidden-tablet-only has-image-centered" v-bind:src="designerInfoC.user.images[230]" /><br>
+                        <p class="user-name"> {{ designerInfoC.user.display_name }}</p>
                     </router-link>
                 </div>
                 <div class="card-container column" v-for='project in designerProjectsC.slice(0, 4)' :key="project.key">
                     <router-link :to="{ path: 'project/' + project.id}" append>
-                    <img class="hidden-mobile" v-bind:src='project.covers[202]' />
-                    <p class="is-hidden-tablet-only hidden-mobile">{{ project.name }}</p>
-                    <a class="is-hidden-tablet-only hidden-mobile" href="#"> View More </a>
+                        <img class="hidden-mobile" v-bind:src='project.covers[202]' />
+                        <p class="is-hidden-tablet-only hidden-mobile">{{ project.name }}</p>
+                        <a class="is-hidden-tablet-only hidden-mobile" href="#"> View More </a>
                     </router-link>
                 </div>
             </div>
         </div>
         <div class="background container" v-if="designerInfoD !== null && designerProjectsD !== null">
-            <!-- class container -->
             <div class="columns">
                 <div class="column is-2">
                     <router-link :to="{ path: 'portfolio/' + designerInfoD.user.id}" append>
-                    <img class="user-image is-hidden-tablet-only has-image-centered" v-bind:src="designerInfoD.user.images[230]" /><br>
-                    <p class="user-name"> {{ designerInfoD.user.display_name }}</p>
+                        <img class="user-image is-hidden-tablet-only has-image-centered" v-bind:src="designerInfoD.user.images[230]" /><br>
+                        <p class="user-name"> {{ designerInfoD.user.display_name }}</p>
                     </router-link>
                 </div>
                 <div class="card-container column" v-for='project in designerProjectsD.slice(0, 4)' :key="project.key">
                     <router-link :to="{ path: 'project/' + project.id}" append>
-                    <img v-bind:src='project.covers[202]' />
-                    <p class="is-hidden-tablet-only">{{ project.name }}</p>
-                    <a class="is-hidden-tablet-only" href="#"> View More </a>
+                        <img v-bind:src='project.covers[202]' />
+                        <p class="is-hidden-tablet-only">{{ project.name }}</p>
+                        <a class="is-hidden-tablet-only" href="#"> View More </a>
                     </router-link>
                 </div>
             </div>
@@ -82,7 +79,6 @@
 <script>
 import Vue from 'vue'
 import axios from 'axios'
-// import _ from 'lodash'
 window.Vue = Vue
 
 export default {
@@ -90,7 +86,6 @@ export default {
   data () {
     return {
       apiRequestCompletionCount: 0,
-      /* repeat the two variables and change the letters to add more designers */
       designerInfoA: null,
       designerProjectsA: null,
       designerInfoB: null,
@@ -102,22 +97,15 @@ export default {
       isLoading: true
     }
   },
-  methods: {
-
-  },
   mounted: function () {
-    let url =
-        'https://cors-anywhere.herokuapp.com/http://www.behance.net/v2/users/'
-    let apiKey = '?api_key=' + 'ELx4Wb6sGGwWnIwP06LglFqOqeFoFDEM'
-
-    /* repeat the following two blocks of code to add more designers */
+    let url = 'https://cors-anywhere.herokuapp.com/http://www.behance.net/v2/users/'
+    let apiKey = '?api_key=' + 'SPWgoDvDXuXxf735SKDCHf5vOU2XXQxq'
     axios
       .get(url + 'carlocadenas' + apiKey)
       .then(response => {
         this.isLoading = false
         this.designerInfoA = response.data
         this.apiRequestCompletionCount++
-        console.log(response)
       })
       .catch(error => console.log(error.stack))
     axios
@@ -125,7 +113,6 @@ export default {
       .then(response => {
         this.designerProjectsA = response.data.projects
         this.apiRequestCompletionCount++
-        console.log(response)
       })
       .catch(error => console.log(error.stack))
     axios
