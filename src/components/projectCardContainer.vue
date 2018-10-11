@@ -52,6 +52,8 @@
                     </router-link>
                 </div>
             </div>
+      </div>
+    </div>
         </div>
         <div class="background container" v-if="designerInfoD !== null && designerProjectsD !== null">
             <!-- class container -->
@@ -194,10 +196,10 @@ p {
 a {
     color: black;
     font-weight: bold;
-}
-
-.background {
-    background-color: #f8f8f8;
+  }
+  
+  .background {
+    background-color: #f7f7f7;
     padding-top: 30px;
     padding-bottom: 30px;
     padding-left: 40px;
