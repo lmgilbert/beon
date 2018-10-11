@@ -93,5 +93,8 @@ h1[data-v-4295d220] {
 h1 {
   font-size: 40px;
   color: white;
+  text-transform: uppercase;
+  text-align: left;
+  
 }
 </style>
