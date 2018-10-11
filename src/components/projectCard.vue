@@ -2,10 +2,11 @@
   <div id="projectCard" v-if='project !== null'>
       <div class="container-fullhd columns" v-for='row in projects' :key='row.key'>
         <div class="column" v-for="project in row" :key="project.key">
+          <router-link :to="{ path: '/project/' + project.id}" append>
             <img v-bind:src='project.covers.original'/>
+          </router-link>
         </div>
       </div>
-    <!-- {{ projects }} -->
   </div>
 </template>
 
@@ -21,6 +22,7 @@ export default {
   data () {
     return {
       projects: null,
+      project: [],
       work: null
     }
   },
@@ -55,5 +57,8 @@ img{
   width: 80%;
   margin-left: auto;
   margin-right: auto;
+}
+img:nth-child(1){
+  margin-top: 100px;
 }
 </style>
