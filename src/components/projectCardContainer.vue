@@ -26,16 +26,17 @@
                 <div class="columns">
                     <div class="column is-2">
                         <router-link :to="{ path: 'portfolio/' + designerInfoA.user.id}" append>
-                        <img class="user-image is-hidden-tablet-only has-image-centered" v-bind:src="designerInfoB.user.images[230]" /><br>
-                        <p class="user-name"> {{ designerInfoB.user.display_name }}</p>
+                            <img class="user-image is-hidden-tablet-only has-image-centered" v-bind:src="designerInfoB.user.images[230]" /><br>
+                            <p class="user-name"> {{ designerInfoB.user.display_name }}</p>
                         </router-link>
                     </div>
                     <div class="card-container column" v-for='project in designerProjectsB.slice(0, 4)' :key="project.key">
                         <router-link :to="{ path: 'project/' + project.id}" append>
-                        <img v-bind:src='project.covers[202]' />
-                        <p class="is-hidden-tablet-only">{{ project.name }}</p>
-                        <a class="is-hidden-tablet-only" href="#"> View More </a>
-                    </router-link>
+                            <img v-bind:src='project.covers[202]' />
+                            <p class="is-hidden-tablet-only">{{ project.name }}</p>
+                            <a class="is-hidden-tablet-only" href="#"> View More </a>
+                        </router-link>
+                    </div>
                 </div>
             </div>
         </div>
