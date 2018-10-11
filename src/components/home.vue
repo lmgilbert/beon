@@ -1,4 +1,5 @@
 <template>
+<!--Banjos code = Home page-->
   <div class="hello">
     <div class="hero-body">
       <div class="container has-text-centered">

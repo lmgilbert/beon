@@ -1,4 +1,5 @@
 <template>
+<!--Banjos code = Footer-->
   <div class="contact">
     <div class="columns">
       <div class="column"></div>

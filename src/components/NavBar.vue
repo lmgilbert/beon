@@ -1,4 +1,5 @@
 <template>
+<!--Banjos code = NavBar-->
   <div class="nav is-hidden-mobile" v-bind:class="{transparent: isOnHomePage}">
     <div class="container">
       <div class="columns is-vcentered">
