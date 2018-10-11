@@ -40,12 +40,12 @@
 
 import axios from 'axios'
 import Vue from 'vue'
+import projectCardContainer from './projectCardContainer'
 window.Vue = Vue
-import projectCardContainer from "./projectCardContainer";
 export default {
   name: 'home',
   components: {
-      "project-card-container": projectCardContainer
+    'project-card-container': projectCardContainer
   },
   data () {
     return {
@@ -61,7 +61,7 @@ export default {
         .get(
           'https://cors-anywhere.herokuapp.com/http://www.behance.net/v2/users/' +
             userID +
-            '?api_key=SPWgoDvDXuXxf735SKDCHf5vOU2XXQxq'
+            '?api_key=ELx4Wb6sGGwWnIwP06LglFqOqeFoFDEM'
         )
         .then(response => {
           this.designers[userID] = response
