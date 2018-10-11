@@ -8,7 +8,7 @@
          <div class="container-fullhd columns" v-for='row in projects' :key='row.key'>
             <div class="column" v-for="project in row" :key="project.key">
               <router-link :to="{ path: '/project/' + project.id}" append>
-                <img v-bind:src='project.covers[202]'/>
+                <img v-bind:src='project.covers[202]' />
               </router-link>
             </div>
          </div>
@@ -20,10 +20,9 @@
 <script>
 import Vue from 'vue'
 import axios from 'axios'
-// import comments from './comments'
 import _ from 'lodash'
-
 window.Vue = Vue
+
 export default {
   name: 'projectCard',
   data () {
@@ -45,7 +44,6 @@ export default {
           this.isLoading = false
           this.projects = _.chunk(response.data.projects, 3)
           this.$forceUpdate()
-          console.log(_.chunk(response.data.projects, 3))
         })
         .catch(error => console.log(error.stack))
     }

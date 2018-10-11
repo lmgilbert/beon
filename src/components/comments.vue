@@ -48,7 +48,6 @@ export default {
           this.comments = response
           this.comment = response.data.comments
           this.$forceUpdate()
-          console.log(this.comments)
         })
         .catch(error => console.log(error.stack))
     }

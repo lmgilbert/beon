@@ -1,19 +1,17 @@
 <template>
   <div class="contact">
     <div class="columns">
-      <div class="column">
-      </div>
+      <div class="column"></div>
       <div class="column is-center">
         <div class="icons-footer">
           <h2 class="contact is-hidden-desktop is-hidden-tablet">Contact us</h2>
-          <img id="email" class="e1 is-hidden-mobile" src="../assets/email.png">
+          <img id="email" class="e1 is-hidden-mobile" src="../assets/email.png" />
           <div class="number">bēon@design.co.nz</div>
-          <img id="phone" class="e2 is-hidden-mobile" src="../assets/phone.png">
+          <img id="phone" class="e2 is-hidden-mobile" src="../assets/phone.png" />
           <div class="number">03 321 12345</div>
         </div>
       </div>
-      <div class="column">
-      </div>
+      <div class="column"></div>
     </div>
   </div>
 </template>
@@ -29,9 +27,7 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
 #phone {
   height: 40px;
   width: 40px;
