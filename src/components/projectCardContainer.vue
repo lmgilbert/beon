@@ -108,7 +108,7 @@ export default {
   mounted: function () {
     let url =
         'https://cors-anywhere.herokuapp.com/http://www.behance.net/v2/users/'
-    let apiKey = '?api_key=' + 'Kfxa6RCoauPffiqhTUja6Y5QhsxOkvAE'
+    let apiKey = '?api_key=' + 'PhrFshKN6P31JPijhKsra2Q63cyOqaBZ'
 
     /* repeat the following two blocks of code to add more designers */
     axios

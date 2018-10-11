@@ -78,7 +78,7 @@ export default {
         .get(
           'https://cors-anywhere.herokuapp.com/http://www.behance.net/v2/projects/' +
             userID +
-            '?api_key=SPWgoDvDXuXxf735SKDCHf5vOU2XXQxq'
+            '?api_key=PhrFshKN6P31JPijhKsra2Q63cyOqaBZ'
         )
         .then(response => {
           this.isLoading = false
