@@ -40,12 +40,12 @@
 
 import axios from 'axios'
 import Vue from 'vue'
+import projectCardContainer from './projectCardContainer'
 window.Vue = Vue
-import projectCardContainer from "./projectCardContainer";
 export default {
   name: 'home',
   components: {
-      "project-card-container": projectCardContainer
+    'project-card-container': projectCardContainer
   },
   data () {
     return {

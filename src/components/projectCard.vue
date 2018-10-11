@@ -12,8 +12,8 @@
 <script>
 import Vue from 'vue'
 import axios from 'axios'
-import comments from './comments'
-import _ from 'lodash'; 
+// import comments from './comments'
+import _ from 'lodash'
 
 window.Vue = Vue
 export default {
@@ -55,7 +55,5 @@ img{
   width: 80%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 150px;
 }
-
 </style>

@@ -105,7 +105,6 @@ export default {
     }
   },
   mounted () {
-       
     this.getDisignerProjects(this.$route.params.id)
   }
 }
