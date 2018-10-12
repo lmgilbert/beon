@@ -9,31 +9,27 @@
     <img id="phone" src="../assets/phone.png"><div class="number" >03 321 12345</div>
     </div>
   </div>
-  <div class="column"> 
-        </div>
-
-    </div>
-    </div>
+  <div class="column">
+  </div>
+  </div>
+  </div>
 </template>
 
 <script>
 export default {
-  name: "HelloWorld",
-  data() {
+  name: 'HelloWorld',
+  data () {
     return {
-      msg: "Welcome to Your Vue.js App"
-    };
+      msg: 'Welcome to Your Vue.js App'
+    }
   }
-};
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-#phone {
-  height: 40px;
-  width: 40px;
-}
+#phone,
 #email {
   height: 40px;
   width: 40px;

@@ -31,7 +31,7 @@ export default {
     }
   },
   methods: {
-    getDisignerProjects: function (userID) {
+    getDesignerProjects: function (userID) {
       axios
         .get(
           'https://cors-anywhere.herokuapp.com/http://www.behance.net/v2/projects/' +
@@ -48,7 +48,7 @@ export default {
     }
   },
   mounted () {
-    this.getDisignerProjects(this.$route.params.id)
+    this.getDesignerProjects(this.$route.params.id)
   }
 }
 </script>

@@ -24,42 +24,44 @@
     </div>
     <!-- card containers -->
     <div class="container">
-      <projectCard userID="s-d-g"></projectCard>
-      <projectCard userID="kilianschoenberger"></projectCard>
-      <projectCard userID="ajcaparo"></projectCard>
-      <projectCard userID="zhelieznova"></projectCard>
+      <projectCard userID="mdoolaard499f"></projectCard>
+    </div>
+    <br>
+    <div class="container">
+      <projectCard userID="northlandscapes"></projectCard>
+    </div>
+    <br>
+    <div class="container">
+      <projectCard userID="FraserMacedo"></projectCard>
+    </div>
+    <br>
+    <div class="container">
+      <projectCard userID="JARLEHc8f1"></projectCard>
     </div>
 
   </div>
 
 </template>
 
-
 <script>
-import axios from "axios";
-import Vue from "vue";
-window.Vue = Vue;
-import projectCard from "@/components/projectCard";
+import projectCard from '@/components/projectCard'
+import Vue from 'vue'
+window.Vue = Vue
 
 export default {
-  name: "home",
-  components: { "projectCard": projectCard },
-  data() {
-    return {
-    };
+  name: 'home',
+  components: { projectCard: projectCard },
+  data () {
+    return {}
   },
 
-  methods: {
-  },
-  mounted() {
-
-  }
-};
+  methods: {},
+  mounted () {}
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
 .card {
   height: 100%;
 }
@@ -152,5 +154,10 @@ p {
 }
 .card {
   background-color: white;
+}
+.image {
+  width: auto;
+  height: 100%;
+  vertical-align: middle;
 }
 </style>
