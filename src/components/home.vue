@@ -79,7 +79,7 @@ export default {
 
 <style scoped>
 .hero-body {
-    background-image: url(../assets/Hero.png);
+    background-image: url(../assets/Hero-img.jpg);
     background-size: cover;
     height: 700px;
 }
