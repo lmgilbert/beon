@@ -1,23 +1,7 @@
 <template>
   <div class="hello">
-    <!-- card containers -->
-
+    <!-- project card -->
       <div class="columns">
-
-        <!--
-        <div class="column">
-          <div id="card">
-            <div class="card-content">
-              <figure class="image is-50x50">
-                <img class="is-rounded" :src="user.profilePicture">
-              </figure>
-            </div>
-            <footer class="">
-              <div class="card-footer-item">{{ user.username }}</div>
-            </footer>
-          </div>
-        </div> -->
-
         <div class="column">
           <div class="has-text-centered">
             <div class="card-content">
@@ -32,7 +16,6 @@
             </div>
           </div>
         </div>
-
         <div class="column" v-for="project in projects" :key="project.id">
           <div class="card has-text-centered">
             <div class="card-image">
@@ -169,7 +152,7 @@ h4 {
   color: white;
   letter-spacing: 5px;
   font-size: 50px;
-  font-weight: 200;
+  font-weight: 100;
 }
 .number {
   background-color: transparent;

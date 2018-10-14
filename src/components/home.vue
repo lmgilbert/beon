@@ -5,6 +5,7 @@
         <img src="../assets/Hero.png" />
         <div class="text">
           <h1>bēon</h1>
+          <br>
           <h3>Dēsign Agēncy</h3>
           <h4>Meet Our Designers</h4>
           <div class="whiteIcons">
@@ -19,7 +20,6 @@
         <div class="Scroll-arrow">
           <img class="arrow" src="../assets/arrow.png" />
         </div>
-        <h2></h2>
       </div>
     </div>
     <!-- card containers -->
@@ -81,42 +81,39 @@ li {
 h1 {
   position: absolute;
   top: 30%;
-  left: 51%;
-  transform: translate(-50%, -50%);
-  color: white;
-  letter-spacing: 20px;
-}
-h3 {
-  position: absolute;
-  top: 38%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  letter-spacing: 0px;
-  font-weight: 400;
-  font-size: 18px;
+  letter-spacing: 15px;
+  font-size: 40px;
+}
+h3 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  letter-spacing: 1px;
+  font-weight: 100;
+  font-size: 12px;
 }
 h4 {
   position: absolute;
-  top: 46%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
   letter-spacing: 5px;
-  font-size: 50px;
-  font-weight: 200;
+  font-size: 30px;
 }
 .number {
   background-color: transparent;
   color: white;
 }
-#phone {
-  height: 40px;
-  width: 40px;
-}
+#phone,
 #email {
   height: 40px;
-  width: 40px;
+  width: 30px;
 }
 .whiteIcons {
   text-align: center;
@@ -126,14 +123,10 @@ p {
   color: white;
   margin: 12px;
 }
-.phone {
-  height: 50px;
-  width: 50px;
-  margin-top: -50px;
-}
+.phone,
 .email {
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 30px;
   margin-top: -50px;
 }
 .hero-icon {
