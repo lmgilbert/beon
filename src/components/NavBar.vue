@@ -59,7 +59,7 @@ h1[data-v-4295d220] {
   color: white;
   font-size: 30px;
   font-weight: bold;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
 }
 
 #logo {
@@ -84,8 +84,8 @@ h1[data-v-4295d220] {
 
 .transparent {
   background-color: rgba(88, 33, 38, 0.5);
-  position: fixed;
-  z-index: 1;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
   left: 0;
   top: 0;
   width: 100%;

@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <navbar/>
-    <router-view/>
-    <footerbar/>
+    <navbar />
+    <router-view />
+    <footerbar />
   </div>
 </template>
 
@@ -12,8 +12,8 @@ import footerbar from './components/footer'
 export default {
   name: 'App',
   components: {
-    'navbar': nav,
-    'footerbar': footerbar
+    navbar: nav,
+    footerbar: footerbar
   }
 }
 </script>
@@ -31,9 +31,9 @@ h1 {
 }
 h2 {
   font-size: 80px;
-  text-align: center
+  text-align: center;
 }
-h3{
+h3 {
   font-size: 20px;
   font-weight: bold;
   color: black;

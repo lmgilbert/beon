@@ -29,7 +29,24 @@
     <div class="Scroll-arrow">
         <img class="arrow" src="../assets/arrow.png">
     </div>
-    <project-card-container />
+    
+    <!-- card containers -->
+    <div class="container">
+      <projectCard userID="mdoolaard499f"></projectCard>
+    </div>
+    <br>
+    <div class="container">
+      <projectCard userID="northlandscapes"></projectCard>
+    </div>
+    <br>
+    <div class="container">
+      <projectCard userID="FraserMacedo"></projectCard>
+    </div>
+    <br>
+    <div class="container">
+      <projectCard userID="JARLEHc8f1"></projectCard>
+    </div>
+
   </div>
 </template>
 
@@ -41,39 +58,13 @@ window.Vue = Vue
 
 export default {
   name: 'home',
-  components: {
-    'project-card-container': projectCardContainer
-  },
+  components: { projectCard: projectCard },
   data () {
-    return {
-      designers: [],
-      numberOfCompletedAPIRequests: 0,
-      apiRequestComplete: false
-    }
+    return {}
   },
-  methods: {
-    getDisignerProjects: function (userID) {
-      axios
-        .get(
-          'https://cors-anywhere.herokuapp.com/http://www.behance.net/v2/users/' +
-            userID +
-            '?api_key=zF7qT0MNLRwLTKENGkqLBJL4u2BIpydE'
-        )
-        .then(response => {
-          this.designers[userID] = response
-          this.$forceUpdate()
-          this.numberOfCompletedAPIRequests++
-        })
-        .catch(error => console.log(error.stack))
-    }
-  },
-  mounted () {
-    this.getDisignerProjects('carlocadenas')
-    this.getDisignerProjects('arturdenys')
-    this.getDisignerProjects('R_G_Gomina')
-    this.getDisignerProjects('sashaillusign')
-    this.$root.$emit('pageChanged', '')
-  }
+
+  methods: {},
+  mounted () {}
 }
 </script>
 
@@ -103,6 +94,51 @@ export default {
   margin-bottom: 100px;
 }
 
+.card {
+  height: 100%;
+}
+
+h1,
+h2 {
+  font-weight: normal;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+h1 {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  letter-spacing: 15px;
+  font-size: 40px;
+}
+h3 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  letter-spacing: 1px;
+  font-weight: 100;
+  font-size: 12px;
+}
+h4 {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  letter-spacing: 5px;
+  font-size: 30px;
+}
+
 .number {
   background-color: transparent;
   color: white;
@@ -128,7 +164,6 @@ p {
   margin: 12px;
   font-weight: 400;
 }
-
 .hero-icon {
   margin-bottom: 50px;
 }
@@ -163,5 +198,17 @@ p {
 #hidden-logo {
     height: 150px;
   width: 165px;
+}
+.container {
+  background-color: #f7f7f7;
+  padding: 30px;
+}
+.card {
+  background-color: white;
+}
+.image {
+  width: auto;
+  height: 100%;
+  vertical-align: middle;
 }
 </style>
