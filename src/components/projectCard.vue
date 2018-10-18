@@ -1,8 +1,10 @@
 <template>
   <div class="hello">
+
     <!-- project card -->
       <div class="columns">
         <div class="column">
+          <router-link :to="'/portfolio/' + userID">
           <div class="has-text-centered">
             <div class="card-content">
               <figure class="image is-50x50">
@@ -15,8 +17,10 @@
               </div>
             </div>
           </div>
+          </router-link>
         </div>
         <div class="column" v-for="project in projects" :key="project.id">
+          <router-link :to="'/project/' + project.id">
           <div class="card has-text-centered">
             <div class="card-image">
               <figure class="image is-3by2">
@@ -31,6 +35,7 @@
               </div>
             </div>
           </div>
+          </router-link>
         </div>
 
       </div>
@@ -53,7 +58,7 @@ export default {
         profilePicture: ''
       },
       projects: [],
-      apiKey: 'z4OTBPKghzwVWyp60e87u5KkZsxXxhCC', // "v5rFuoo114eTmVB5dKjaVHsbAaMu11gY", //This should be moved to an environment variable in the future //  z4OTBPKghzwVWyp60e87u5KkZsxXxhCC
+      apiKey: 'Kfxa6RCoauPffiqhTUja6Y5QhsxOkvAE', // "v5rFuoo114eTmVB5dKjaVHsbAaMu11gY", //This should be moved to an environment variable in the future //  z4OTBPKghzwVWyp60e87u5KkZsxXxhCC
       numberOfCompletedAPIRequests: 0
     }
   },

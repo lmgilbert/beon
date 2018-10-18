@@ -29,21 +29,20 @@
     <div class="Scroll-arrow">
         <img class="arrow" src="../assets/arrow.png">
     </div>
-    
     <!-- card containers -->
-    <div class="container">
+    <div class="container card-container">
       <projectCard userID="mdoolaard499f"></projectCard>
     </div>
     <br>
-    <div class="container">
+    <div class="container card-container">
       <projectCard userID="northlandscapes"></projectCard>
     </div>
     <br>
-    <div class="container">
+    <div class="container card-container">
       <projectCard userID="FraserMacedo"></projectCard>
     </div>
     <br>
-    <div class="container">
+    <div class="container card-container">
       <projectCard userID="JARLEHc8f1"></projectCard>
     </div>
 
@@ -51,9 +50,8 @@
 </template>
 
 <script>
-import axios from 'axios'
 import Vue from 'vue'
-import projectCardContainer from './projectCardContainer'
+import projectCard from './projectCard'
 window.Vue = Vue
 
 export default {
@@ -64,7 +62,16 @@ export default {
   },
 
   methods: {},
-  mounted () {}
+  mounted () {
+    this.$root.$emit('pageChanged', '')
+  },
+  watch: {
+    $route (to, from) {
+      if (to.name === '') {
+        this.$root.$emit('pageChanged', '')
+      }
+    }
+  }
 }
 </script>
 
@@ -199,11 +206,11 @@ p {
     height: 150px;
   width: 165px;
 }
-.container {
+.card-container {
   background-color: #f7f7f7;
   padding: 30px;
 }
-.card {
+.project-card {
   background-color: white;
 }
 .image {
